@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{048EE46B-0A55-45CF-856F-DF22173A4252}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaHospitalar2</RootNamespace>
+    <AssemblyName>SistemaHospitalar2</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCadastramento\frmCadastrarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarPaciente.Designer.cs">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarPaciente.Designer.cs">
+      <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_AltaHospitalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_AltaHospitalar.Designer.cs">
+      <DependentUpon>frmRelatorio_AltaHospitalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Justificativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Justificativo.Designer.cs">
+      <DependentUpon>frmRelatorio_Justificativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_MarcacaoCirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_MarcacaoCirugia.Designer.cs">
+      <DependentUpon>frmRelatorio_MarcacaoCirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Obito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Obito.Designer.cs">
+      <DependentUpon>frmRelatorio_Obito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\crPrescricao_Medica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crPrescricao_Medica.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crPrognostico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crPrognostico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crReceituario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReceituario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crSolicitacaoExame_Consulta1.cs">
+      <DependentUpon>crSolicitacaoExame_Consulta1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorio\crvRelatorioAltaHospitalar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crvRelatorioAltaHospitalar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crvRelatorioJustificativo_Consulta.cs">
+      <DependentUpon>crvRelatorioJustificativo_Consulta.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorio\crvRelatorioObito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crvRelatorioObito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crSaidaFarmacos_MatDescartavel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSaidaFarmacos_MatDescartavel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crSolicitacaoExame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSolicitacaoExame.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dados\Listar.cs" />
+    <Compile Include="db_HospitalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_HospitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMorte_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMorte_Paciente.Designer.cs">
+      <DependentUpon>frmCadastrarMorte_Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEspecialidadeMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEspecialidadeMedico.Designer.cs">
+      <DependentUpon>frmCadastrarEspecialidadeMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMarcacaoCirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMarcacaoCirugia.Designer.cs">
+      <DependentUpon>frmCadastrarMarcacaoCirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMarcacaoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMarcacaoConsulta.Designer.cs">
+      <DependentUpon>frmCadastrarMarcacaoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTipo_Cirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTipo_Cirugia.Designer.cs">
+      <DependentUpon>frmCadastrarTipo_Cirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTipo_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTipo_Consulta.Designer.cs">
+      <DependentUpon>frmCadastrarTipo_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarAlta_PacienteInternado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarAlta_PacienteInternado.Designer.cs">
+      <DependentUpon>frmCadastrarAlta_PacienteInternado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarAlaHospitalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarAlaHospitalar.Designer.cs">
+      <DependentUpon>frmConsultarAlaHospitalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarAlta_PacienteInternado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarAlta_PacienteInternado.Designer.cs">
+      <DependentUpon>frmConsultarAlta_PacienteInternado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEscola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEscola.Designer.cs">
+      <DependentUpon>frmConsultarEscola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEspecialidadeMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEspecialidadeMedico.Designer.cs">
+      <DependentUpon>frmConsultarEspecialidadeMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEstagiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarEstagiario.Designer.cs">
+      <DependentUpon>frmConsultarEstagiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarExame.Designer.cs">
+      <DependentUpon>frmConsultarExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarFornecedor.Designer.cs">
+      <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarFuncionario_Geral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarFuncionario_Geral.Designer.cs">
+      <DependentUpon>frmConsultarFuncionario_Geral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMarcacaoCirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMarcacaoCirugia.Designer.cs">
+      <DependentUpon>frmConsultarMarcacaoCirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMarcacaoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMarcacaoConsulta.Designer.cs">
+      <DependentUpon>frmConsultarMarcacaoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMatDescartavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMatDescartavel.Designer.cs">
+      <DependentUpon>frmConsultarMatDescartavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMedicamento.Designer.cs">
+      <DependentUpon>frmConsultarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMedico.Designer.cs">
+      <DependentUpon>frmConsultarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMorte_PacienteInternado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarMorte_PacienteInternado.Designer.cs">
+      <DependentUpon>frmConsultarMorte_PacienteInternado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarPacienteInternado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarPacienteInternado.Designer.cs">
+      <DependentUpon>frmConsultarPacienteInternado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarQuarto.Designer.cs">
+      <DependentUpon>frmConsultarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTipoCirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTipoCirugia.Designer.cs">
+      <DependentUpon>frmConsultarTipoCirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTipoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTipoConsulta.Designer.cs">
+      <DependentUpon>frmConsultarTipoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTratamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarTratamento.Designer.cs">
+      <DependentUpon>frmConsultarTratamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta\frmConsultarUsuario.Designer.cs">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetFarmacia\frmSaidaMatDescartavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetFarmacia\frmSaidaMatDescartavel.Designer.cs">
+      <DependentUpon>frmSaidaMatDescartavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetFarmacia\frmSaidaMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetFarmacia\frmSaidaMedicamento.Designer.cs">
+      <DependentUpon>frmSaidaMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarSenha.Designer.cs">
+      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Prognostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Prognostico.Designer.cs">
+      <DependentUpon>frmRelatorio_Prognostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_MarcacaoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_MarcacaoConsulta.Designer.cs">
+      <DependentUpon>frmRelatorio_MarcacaoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Receituario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_Receituario.Designer.cs">
+      <DependentUpon>frmRelatorio_Receituario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_SolicitacaoExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_SolicitacaoExame.Designer.cs">
+      <DependentUpon>frmRelatorio_SolicitacaoExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\crvMarcacaoCirugia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crvMarcacaoCirugia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crvMarcacaoConsulta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crvMarcacaoConsulta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\crvRelatorioJustificativo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crvRelatorioJustificativo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarFornecedor.Designer.cs">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Referencias_Formularios.cs" />
+    <Compile Include="Dados\conexao.cs" />
+    <Compile Include="frmCadastramento\frmCadastrarFuncionario_Geral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarFuncionario_Geral.Designer.cs">
+      <DependentUpon>frmCadastrarFuncionario_Geral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarExame.Designer.cs">
+      <DependentUpon>frmCadastrarExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEstagiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEstagiario.Designer.cs">
+      <DependentUpon>frmCadastrarEstagiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarAla_Hospitalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarAla_Hospitalar.Designer.cs">
+      <DependentUpon>frmCadastrarAla_Hospitalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEscola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarEscola.Designer.cs">
+      <DependentUpon>frmCadastrarEscola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarQuarto.Designer.cs">
+      <DependentUpon>frmCadastrarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMaterialDescartavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMaterialDescartavel.Designer.cs">
+      <DependentUpon>frmCadastrarMaterialDescartavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMedicamento.Designer.cs">
+      <DependentUpon>frmCadastrarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarPacienteInternado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarPacienteInternado.Designer.cs">
+      <DependentUpon>frmCadastrarPacienteInternado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTratamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarTratamento.Designer.cs">
+      <DependentUpon>frmCadastrarTratamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastramento\frmCadastrarMedico.Designer.cs">
+      <DependentUpon>frmCadastrarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\Crudes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmRelatorio\frmRelatorio_PrescricaoMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio\frmRelatorio_PrescricaoMedica.Designer.cs">
+      <DependentUpon>frmRelatorio_PrescricaoMedica.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarPaciente.resx">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarPaciente.resx">
+      <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_AltaHospitalar.resx">
+      <DependentUpon>frmRelatorio_AltaHospitalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_Justificativo.resx">
+      <DependentUpon>frmRelatorio_Justificativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_MarcacaoCirugia.resx">
+      <DependentUpon>frmRelatorio_MarcacaoCirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_Obito.resx">
+      <DependentUpon>frmRelatorio_Obito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crPrescricao_Medica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crPrescricao_Medica.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crPrognostico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crPrognostico.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crReceituario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceituario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crSolicitacaoExame_Consulta1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSolicitacaoExame_Consulta1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvRelatorioAltaHospitalar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvRelatorioAltaHospitalar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvRelatorioJustificativo_Consulta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvRelatorioJustificativo_Consulta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvRelatorioObito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvRelatorioObito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crSaidaFarmacos_MatDescartavel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSaidaFarmacos_MatDescartavel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crSolicitacaoExame.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSolicitacaoExame.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMorte_Paciente.resx">
+      <DependentUpon>frmCadastrarMorte_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarEspecialidadeMedico.resx">
+      <DependentUpon>frmCadastrarEspecialidadeMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMarcacaoCirugia.resx">
+      <DependentUpon>frmCadastrarMarcacaoCirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMarcacaoConsulta.resx">
+      <DependentUpon>frmCadastrarMarcacaoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarTipo_Cirugia.resx">
+      <DependentUpon>frmCadastrarTipo_Cirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarTipo_Consulta.resx">
+      <DependentUpon>frmCadastrarTipo_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarAlta_PacienteInternado.resx">
+      <DependentUpon>frmCadastrarAlta_PacienteInternado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarAlaHospitalar.resx">
+      <DependentUpon>frmConsultarAlaHospitalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarAlta_PacienteInternado.resx">
+      <DependentUpon>frmConsultarAlta_PacienteInternado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarEscola.resx">
+      <DependentUpon>frmConsultarEscola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarEspecialidadeMedico.resx">
+      <DependentUpon>frmConsultarEspecialidadeMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarEstagiario.resx">
+      <DependentUpon>frmConsultarEstagiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarExame.resx">
+      <DependentUpon>frmConsultarExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarFornecedor.resx">
+      <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarFuncionario_Geral.resx">
+      <DependentUpon>frmConsultarFuncionario_Geral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMarcacaoCirugia.resx">
+      <DependentUpon>frmConsultarMarcacaoCirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMarcacaoConsulta.resx">
+      <DependentUpon>frmConsultarMarcacaoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMatDescartavel.resx">
+      <DependentUpon>frmConsultarMatDescartavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMedicamento.resx">
+      <DependentUpon>frmConsultarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMedico.resx">
+      <DependentUpon>frmConsultarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarMorte_PacienteInternado.resx">
+      <DependentUpon>frmConsultarMorte_PacienteInternado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarPacienteInternado.resx">
+      <DependentUpon>frmConsultarPacienteInternado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarQuarto.resx">
+      <DependentUpon>frmConsultarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarTipoCirugia.resx">
+      <DependentUpon>frmConsultarTipoCirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarTipoConsulta.resx">
+      <DependentUpon>frmConsultarTipoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarTratamento.resx">
+      <DependentUpon>frmConsultarTratamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetFarmacia\frmSaidaMatDescartavel.resx">
+      <DependentUpon>frmSaidaMatDescartavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetFarmacia\frmSaidaMedicamento.resx">
+      <DependentUpon>frmSaidaMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarSenha.resx">
+      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_Prognostico.resx">
+      <DependentUpon>frmRelatorio_Prognostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_MarcacaoConsulta.resx">
+      <DependentUpon>frmRelatorio_MarcacaoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_Receituario.resx">
+      <DependentUpon>frmRelatorio_Receituario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_SolicitacaoExame.resx">
+      <DependentUpon>frmRelatorio_SolicitacaoExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvMarcacaoCirugia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvMarcacaoCirugia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvMarcacaoConsulta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvMarcacaoConsulta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crvRelatorioJustificativo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crvRelatorioJustificativo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarExame.resx">
+      <DependentUpon>frmCadastrarExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarEstagiario.resx">
+      <DependentUpon>frmCadastrarEstagiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarFuncionario_Geral.resx">
+      <DependentUpon>frmCadastrarFuncionario_Geral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarAla_Hospitalar.resx">
+      <DependentUpon>frmCadastrarAla_Hospitalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarEscola.resx">
+      <DependentUpon>frmCadastrarEscola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarQuarto.resx">
+      <DependentUpon>frmCadastrarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarFornecedor.resx">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMaterialDescartavel.resx">
+      <DependentUpon>frmCadastrarMaterialDescartavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMedicamento.resx">
+      <DependentUpon>frmCadastrarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarPacienteInternado.resx">
+      <DependentUpon>frmCadastrarPacienteInternado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarTratamento.resx">
+      <DependentUpon>frmCadastrarTratamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastramento\frmCadastrarMedico.resx">
+      <DependentUpon>frmCadastrarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio\frmRelatorio_PrescricaoMedica.resx">
+      <DependentUpon>frmRelatorio_PrescricaoMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="db_HospitalDataSet.xsc">
+      <DependentUpon>db_HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_HospitalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_HospitalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_HospitalDataSet.xss">
+      <DependentUpon>db_HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_profile_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_visibility_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_client_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrative_tools_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_off_button_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_importance_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_importance_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ertu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\at.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\es.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dfc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\índice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-de-negocios-icone-psd-e-png_55-292934250_Fotor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xde.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\~forr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teste.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicos-1[1]1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_client_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_importance_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-de-negocios-icone-psd-e-png_55-292934250_Fotor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir-%287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edre1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edre2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xde1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edre3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xde2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_1_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dropdown_field_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pull_down_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferirwe.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pull_down_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farmacia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tto1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\part.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

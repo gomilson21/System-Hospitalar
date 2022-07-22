@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SistemaHospitalar2.Conexao" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAEA=</HashCode>
+      <FileName>conexao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.Crudes" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAUAADAAAgAAEgAIAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Crudes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSet" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wBaADoAgF5TNEopEDMQS0DIBiAgSxBiQABAGAHEApjg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarAdministrativo" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wyCAkQQBCCCQAnAgBACABBAGIISBAIgDYKBEAAZmAAA=</HashCode>
+      <FileName>frmCadastrarAdministrativo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarAnalista" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCCCkQgBCCCQAlAQBACABBACIISBAIiDYCBEiUZmAAA=</HashCode>
+      <FileName>frmCadastrarAnalista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarCatalogador" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCCAkQYBCiCQAlAABAGQBBAGIISDAIgDYCBEAAZmBAA=</HashCode>
+      <FileName>frmCadastrarCatalogador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarEnfermeiro" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCCA0QCBCGSQAlAQBACABBACIISBAIgDYCBEAAZmAgA=</HashCode>
+      <FileName>frmCadastrarEnfermeiro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarEstagiario" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8CCAkVQBCCCUAlggBECABBACIIiJAIgDYKDEAAZmAAA=</HashCode>
+      <FileName>frmCadastrarEstagiario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarFarmaceutico" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCCAkQABCSCQAlAQBQCABBACIISBALgDYCREAAZmgAA=</HashCode>
+      <FileName>frmCadastrarFarmaceutico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarFornecedor" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCCAkAABDCAYAlQAgADABBACIIDBAAgDICBGAJZmAgA=</HashCode>
+      <FileName>frmCadastrarFornecedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarMaterialDescartavel" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBSAkAABGCAQAlQCAgDADAACEICBAAABICBEIARmAAA=</HashCode>
+      <FileName>frmCadastrarMaterialDescartavel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarMedicamento" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBCAkAUBACAQAnQAAgDAhAACCICBgAIBACBEAQRiAII=</HashCode>
+      <FileName>frmCadastrarMedicamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarMedico" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCCAkQABCDSQAlAQBACABBACIIWLAYgDYCBGCAZmAAA=</HashCode>
+      <FileName>frmCadastrarMedico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarPaciente" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SACAkEQBCCCQA1BgAAGEDRACIICjAEhDYeBGAAZmAQA=</HashCode>
+      <FileName>frmCadastrarPaciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarTratamento" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SACAkEABCCCQAlBAAACABAACAICBAAABICBEAARiAQI=</HashCode>
+      <FileName>frmCadastrarTratamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmCadastrarUsuario" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiCBkAABACiQAlAAIASAJIAiAMChKAQBECBkEBViJIA=</HashCode>
+      <FileName>frmCadastrarUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmDashboard" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARcgABEACGAUoEADArGAaQMOgCQMoBgMAChNIQDBR4E=</HashCode>
+      <FileName>frmDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmInicio" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAAAAAAACAAAACAAAAIAAAAAACAAAAAAA=</HashCode>
+      <FileName>frmInicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.frmLogin" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAACiGBDFCAAACAoAACYZAAAEAAACBAAABAAIA=</HashCode>
+      <FileName>frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.Program" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.Referencias_Formularios" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAAACABAACAAAAAAAABAgAgBAAIhEIgIAAAA=</HashCode>
+      <FileName>Referencias_Formularios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.AnalistaTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.CatalogadorTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.EnfermeiroTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.EscolaTableAdapter" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.Especialidade_MedicoTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.EstagiarioTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.FarmaceuticoTableAdapter" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.FornecedorTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.FuncaoTableAdapter" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.Funcionario_AdministrativoTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.Material_DescartavelTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.MedicamentoTableAdapter" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.MedicoTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.PacienteTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.Prescricao_MedicaTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.ProntuarioTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.TratamentoTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.TriagemTableAdapter" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.UsuarioTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.db_HospitalDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UwECQCSSgABhBEEJQAUAcAKjAAAKgCACDCYAAAgQFAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBDASgAgACAAIAEAEAgBGQgbUUUgABAGgIQEAigCAqI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaHospitalar2.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAABAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

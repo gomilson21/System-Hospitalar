@@ -1,0 +1,166 @@
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.exe.config
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.exe
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.pdb
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.exe
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.pdb
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.Shared.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\FlashControlV71.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\ShockwaveFlashObjects.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\stdole.dll
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.csprojResolveAssemblyReference.cache
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_AltaHospitalar.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_MarcacaoCirugia.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Obito.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarEspecialidadeMedico.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMarcacaoCirugia.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMarcacaoConsulta.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarTipo_Cirugia.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarTipo_Consulta.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarAlta_PacienteInternado.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarAlaHospitalar.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarAlta_PacienteInternado.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEscola.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEspecialidadeMedico.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEstagiario.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarExame.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarFornecedor.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarFuncionario_Geral.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMarcacaoCirugia.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMarcacaoConsulta.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMatDescartavel.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMedicamento.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMedico.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMorte_PacienteInternado.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarPacienteInternado.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarQuarto.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTipoCirugia.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTipoConsulta.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTratamento.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarUsuario.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmGetFarmacia.frmSaidaMatDescartavel.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmGetFarmacia.frmSaidaMedicamento.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRecuperarSenha.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Prognostico.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_MarcacaoConsulta.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Receituario.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_SolicitacaoExame.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmSobre.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarExame.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarEstagiario.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarFuncionarioGeral.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarAla_Hospitalar.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarEscola.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarQuarto.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarFornecedor.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMaterialDescartavel.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMedicamento.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarPacienteInternado.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarTratamento.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarUsuario.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmDashboard.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmInicio.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmLogin.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMedico.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.Properties.Resources.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio_PrescricaoMedica.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.csproj.GenerateResource.Cache
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarPaciente.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarPaciente.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Justificativo.resources
+C:\Z_Gomilson\#Começando\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMorte_Paciente.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.exe.config
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.exe
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.pdb
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.exe
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\SistemaHospitalar2.pdb
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.Shared.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\FlashControlV71.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\ShockwaveFlashObjects.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\bin\Debug\stdole.dll
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.csprojResolveAssemblyReference.cache
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarPaciente.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarPaciente.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_AltaHospitalar.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Justificativo.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_MarcacaoCirugia.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Obito.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMorte_Paciente.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarEspecialidadeMedico.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMarcacaoCirugia.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarMarcacaoConsulta.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarTipo_Cirugia.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarTipo_Consulta.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarAlta_PacienteInternado.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarAlaHospitalar.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarAlta_PacienteInternado.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEscola.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEspecialidadeMedico.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarEstagiario.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarExame.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarFornecedor.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarFuncionario_Geral.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMarcacaoCirugia.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMarcacaoConsulta.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMatDescartavel.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMedicamento.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMedico.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarMorte_PacienteInternado.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarPacienteInternado.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarQuarto.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTipoCirugia.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTipoConsulta.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarTratamento.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmConsulta.frmConsultarUsuario.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmGetFarmacia.frmSaidaMatDescartavel.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmGetFarmacia.frmSaidaMedicamento.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRecuperarSenha.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Prognostico.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_MarcacaoConsulta.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_Receituario.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio.frmRelatorio_SolicitacaoExame.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmSobre.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarExame.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarEstagiario.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarFuncionarioGeral.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarAla_Hospitalar.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarEscola.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastramento.frmCadastrarQuarto.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarFornecedor.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMaterialDescartavel.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMedicamento.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarPacienteInternado.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarTratamento.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarUsuario.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmDashboard.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmInicio.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmLogin.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmCadastrarMedico.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.Properties.Resources.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.frmRelatorio_PrescricaoMedica.resources
+C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\obj\Debug\SistemaHospitalar2.csproj.GenerateResource.Cache
