@@ -33,16 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.tratamentoDataGridView = new System.Windows.Forms.DataGridView();
+            this.codTratamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_tratamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao_tratamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tratamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_HospitalDataSet = new SistemaHospitalar2.db_HospitalDataSet();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.tratamentoTableAdapter = new SistemaHospitalar2.db_HospitalDataSetTableAdapters.TratamentoTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.codTratamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_tratamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao_tratamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
+            this.txtPesquisa = new Guna.UI.WinForms.GunaTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tratamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tratamentoBindingSource)).BeginInit();
@@ -103,6 +104,29 @@
             this.tratamentoDataGridView.Size = new System.Drawing.Size(615, 215);
             this.tratamentoDataGridView.TabIndex = 32;
             // 
+            // codTratamentoDataGridViewTextBoxColumn
+            // 
+            this.codTratamentoDataGridViewTextBoxColumn.DataPropertyName = "codTratamento";
+            this.codTratamentoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codTratamentoDataGridViewTextBoxColumn.Name = "codTratamentoDataGridViewTextBoxColumn";
+            this.codTratamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nome_tratamento
+            // 
+            this.nome_tratamento.DataPropertyName = "nome_tratamento";
+            this.nome_tratamento.HeaderText = "Nome do Tratamento";
+            this.nome_tratamento.Name = "nome_tratamento";
+            this.nome_tratamento.ReadOnly = true;
+            this.nome_tratamento.Width = 200;
+            // 
+            // descricao_tratamento
+            // 
+            this.descricao_tratamento.DataPropertyName = "descricao_tratamento";
+            this.descricao_tratamento.HeaderText = "Descrição do Tratamento";
+            this.descricao_tratamento.Name = "descricao_tratamento";
+            this.descricao_tratamento.ReadOnly = true;
+            this.descricao_tratamento.Width = 300;
+            // 
             // tratamentoBindingSource
             // 
             this.tratamentoBindingSource.DataMember = "Tratamento";
@@ -112,14 +136,6 @@
             // 
             this.db_HospitalDataSet.DataSetName = "db_HospitalDataSet";
             this.db_HospitalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(6, 26);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(444, 26);
-            this.txtPesquisa.TabIndex = 33;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // tratamentoTableAdapter
             // 
@@ -149,6 +165,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBuscar);
             this.groupBox3.Controls.Add(this.txtPesquisa);
             this.groupBox3.Location = new System.Drawing.Point(12, 132);
             this.groupBox3.Name = "groupBox3";
@@ -157,28 +174,51 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Faça a sua consulta";
             // 
-            // codTratamentoDataGridViewTextBoxColumn
+            // btnBuscar
             // 
-            this.codTratamentoDataGridViewTextBoxColumn.DataPropertyName = "codTratamento";
-            this.codTratamentoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codTratamentoDataGridViewTextBoxColumn.Name = "codTratamentoDataGridViewTextBoxColumn";
-            this.codTratamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BaseColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderSize = 1;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::SistemaHospitalar2.Properties.Resources.search_26px;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(431, 27);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Radius = 15;
+            this.btnBuscar.Size = new System.Drawing.Size(30, 26);
+            this.btnBuscar.TabIndex = 47;
             // 
-            // nome_tratamento
+            // txtPesquisa
             // 
-            this.nome_tratamento.DataPropertyName = "nome_tratamento";
-            this.nome_tratamento.HeaderText = "Nome do Tratamento";
-            this.nome_tratamento.Name = "nome_tratamento";
-            this.nome_tratamento.ReadOnly = true;
-            this.nome_tratamento.Width = 200;
-            // 
-            // descricao_tratamento
-            // 
-            this.descricao_tratamento.DataPropertyName = "descricao_tratamento";
-            this.descricao_tratamento.HeaderText = "Descrição do Tratamento";
-            this.descricao_tratamento.Name = "descricao_tratamento";
-            this.descricao_tratamento.ReadOnly = true;
-            this.descricao_tratamento.Width = 300;
+            this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisa.BaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.BorderColor = System.Drawing.Color.DarkCyan;
+            this.txtPesquisa.BorderSize = 1;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.FocusedBorderColor = System.Drawing.Color.Red;
+            this.txtPesquisa.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPesquisa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(6, 25);
+            this.txtPesquisa.MaxLength = 50;
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.Radius = 18;
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.Size = new System.Drawing.Size(459, 30);
+            this.txtPesquisa.TabIndex = 46;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // frmConsultarTratamento
             // 
@@ -204,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.db_HospitalDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,7 +254,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.DataGridView tratamentoDataGridView;
-        private System.Windows.Forms.TextBox txtPesquisa;
         private db_HospitalDataSet db_HospitalDataSet;
         private System.Windows.Forms.BindingSource tratamentoBindingSource;
         private db_HospitalDataSetTableAdapters.TratamentoTableAdapter tratamentoTableAdapter;
@@ -225,5 +263,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codTratamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome_tratamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao_tratamento;
+        private Guna.UI.WinForms.GunaButton btnBuscar;
+        private Guna.UI.WinForms.GunaTextBox txtPesquisa;
     }
 }

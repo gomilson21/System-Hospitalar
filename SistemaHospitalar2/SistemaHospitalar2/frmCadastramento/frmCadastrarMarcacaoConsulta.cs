@@ -73,7 +73,6 @@ namespace SistemaHospitalar2.frmCadastramento
             btnSalvar.Enabled = false;
             btnEditar.Enabled = true;
 
-            DiasRepouso.ReadOnly = true;
             descricaoTextBox.ReadOnly = true;
         }
 
@@ -84,7 +83,6 @@ namespace SistemaHospitalar2.frmCadastramento
             btnSalvar.Enabled = true;
             btnEditar.Enabled = false;
 
-            DiasRepouso.ReadOnly = false;
             descricaoTextBox.ReadOnly = false;
         }
 
@@ -121,8 +119,7 @@ namespace SistemaHospitalar2.frmCadastramento
                 cbCodMedico.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[3].Value.ToString();
                 dataDateTimePicker.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[4].Value.ToString();
                 dtpHoraConsulta.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[5].Value.ToString();
-                DiasRepouso.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[6].Value.ToString();
-                descricaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[7].Value.ToString();
+                descricaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[6].Value.ToString();
                 this.HabilitarBotao();
             }
             else
@@ -166,8 +163,8 @@ namespace SistemaHospitalar2.frmCadastramento
             {
                 if (operacao.Equals("inserir"))
                 {
-                    marcacao.inserirMarcacaoConsulta(Convert.ToInt32(cbCodPaciente.SelectedValue), Convert.ToInt32(cbCodTipoConsulta.SelectedValue), Convert.ToInt32(cbCodMedico.SelectedValue),
-                    Convert.ToDateTime(dataDateTimePicker.Text), dtpHoraConsulta.Text, Convert.ToInt32(DiasRepouso.Value),  descricaoTextBox.Text);
+                    marcacao.inserirMarcacaoConsulta(Convert.ToInt32(cbCodPaciente.SelectedValue), Convert.ToInt32(cbCodTipoConsulta.SelectedValue),
+                        Convert.ToInt32(cbCodMedico.SelectedValue), Convert.ToDateTime(dataDateTimePicker.Text), dtpHoraConsulta.Text, descricaoTextBox.Text);
                     if (marcacao.resp.Equals("OK"))
                     {
                         MessageBox.Show("Nova Consulta Marcada adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -180,7 +177,7 @@ namespace SistemaHospitalar2.frmCadastramento
                 else
                 {
                     marcacao.editarMarcacaoConsulta(Convert.ToInt32(codigo), Convert.ToInt32(cbCodPaciente.SelectedValue), Convert.ToInt32(cbCodTipoConsulta.SelectedValue),
-                Convert.ToInt32(cbCodMedico.SelectedValue), Convert.ToDateTime(dataDateTimePicker.Text), dtpHoraConsulta.Text, Convert.ToInt32(DiasRepouso.Value), descricaoTextBox.Text);
+                        Convert.ToInt32(cbCodMedico.SelectedValue), Convert.ToDateTime(dataDateTimePicker.Text), dtpHoraConsulta.Text, descricaoTextBox.Text);
                     if (marcacao.resp.Equals("OK"))
                     {
                         MessageBox.Show("Dados Consulta Marcada actualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -215,31 +212,6 @@ namespace SistemaHospitalar2.frmCadastramento
 
             Referencias_Formularios.relMarcacaoConsulta.Show();
             Referencias_Formularios.relMarcacaoConsulta.Focus();
-        }
-
-        private void btnSolExame_Click(object sender, EventArgs e)
-        {
-            if (Referencias_Formularios.relSolicitacaoExame == null)
-                Referencias_Formularios.relSolicitacaoExame = new frmRelatorio.frmRelatorio_SolicitacaoExame();
-
-            codMarcacaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(); ;
-            Referencias_Formularios.relSolicitacaoExame.codPacInternado = Convert.ToInt32(codMarcacaoTextBox.Text);
-            Referencias_Formularios.relSolicitacaoExame.operacao = "Marcação Consulta";
-            Referencias_Formularios.relSolicitacaoExame.Show();
-            Referencias_Formularios.relSolicitacaoExame.Focus();
-        }
-
-        private void btnJustificativo_Click(object sender, EventArgs e)
-        {
-            if (Referencias_Formularios.relJustificativo == null)
-                Referencias_Formularios.relJustificativo = new frmRelatorio.frmRelatorio_Justificativo();
-
-            codMarcacaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[0].Value.ToString(); ;
-            Referencias_Formularios.relJustificativo.codMarcacao = Convert.ToInt32(codMarcacaoTextBox.Text);
-            Referencias_Formularios.relJustificativo.operacao = "Marcação Consulta";
-
-            Referencias_Formularios.relJustificativo.Show();
-            Referencias_Formularios.relJustificativo.Focus();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -279,8 +251,7 @@ namespace SistemaHospitalar2.frmCadastramento
             cbCodMedico.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[3].Value.ToString();
             dataDateTimePicker.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[4].Value.ToString();
             dtpHoraConsulta.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[5].Value.ToString();
-            DiasRepouso.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[6].Value.ToString();
-            descricaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[7].Value.ToString();
+            descricaoTextBox.Text = marcacaoConsultaDataGridView.CurrentRow.Cells[6].Value.ToString();
         }
     }
 }

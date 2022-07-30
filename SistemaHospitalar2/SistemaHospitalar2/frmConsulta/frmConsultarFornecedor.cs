@@ -19,71 +19,73 @@ namespace SistemaHospitalar2.frmConsulta
         }
 
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
+        DataTable dados;
+        SqlDataAdapter Adapter;
 
         private void MostrarBotao()
         {
-            if (cbFormaPesquisa.SelectedItem.Equals("Data do Início do Contratato"))
+            if (cbFormaPesquisa.SelectedItem.Equals("Data do Início do Contrato"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
-            else if (cbFormaPesquisa.SelectedItem.Equals("Data do Fim do Contratato"))
+            else if (cbFormaPesquisa.SelectedItem.Equals("Data do Fim do Contrato"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else
             {
-                btnBuscar.Hide();
-                btnActualizar.Hide();
+                btnBuscar.Enabled = false;
+                btnActualizar.Enabled = false;
             }
         }
         // Nome do Fornecedor
         public void PesquisarNomeFornecedor()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE nome_fornecedor LIKE '%" + txtPesquisa.Text +"%'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE nome_fornecedor LIKE '%" + txtPesquisa.Text +"%'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
         // Nome da Email
         public void PesquisarEmail()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE email_fornedor LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE email_fornedor LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
         // Nacionalidade do Fornecedor
         public void PesquisarNacionalidade()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor nacionalidade_fornecedor LIKE  '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor nacionalidade_fornecedor LIKE  '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
         // Endereço do Forncedor
         public void PesquisarEndereco()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor endereco_fornecedor LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor endereco_fornecedor LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
         // Data do Início do Contratato do Fornecedor
         public void PesquisarDataInicioContrato()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE inicio_contrato = '" + txtPesquisa.Text + "'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE inicio_contrato = '" + txtPesquisa.Text + "'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
         // Data do Fim do Contratato do Fornecedor
         public void PesquisarDataFimContrato()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE fim_contrato = '" + txtPesquisa.Text + "'", Sqlcon);
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE fim_contrato = '" + txtPesquisa.Text + "'", Sqlcon);
+            Adapter.Fill(dados);
             fornecedorDataGridView.DataSource = dados;
         }
 
@@ -114,15 +116,16 @@ namespace SistemaHospitalar2.frmConsulta
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cbFormaPesquisa.SelectedItem.Equals("Data do Início do Contratato"))
+            if (cbFormaPesquisa.SelectedItem.Equals("Data do Início do Contrato"))
                 this.PesquisarDataInicioContrato();
-            else if (cbFormaPesquisa.SelectedItem.Equals("Data do Fim do Contratato"))
+            else if (cbFormaPesquisa.SelectedItem.Equals("Data do Fim do Contrato"))
                 this.PesquisarDataFimContrato();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             txtPesquisa.Clear();
+            this.fornecedorTableAdapter.Fill(this.db_HospitalDataSet.Fornecedor);
         }
 
         private void btnSair_Click(object sender, EventArgs e)

@@ -138,13 +138,19 @@ namespace SistemaHospitalar2.frmCadastramento
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (bI_pacienteTextBox.TextLength != 14)
+            if (dataNascimento_pacienteDateTimePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Valor da Data de Nascimento inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(dataNascimento_pacienteDateTimePicker, "Valor da Data de Nascimento inválida!");
+                dataNascimento_pacienteDateTimePicker.Focus();
+            }
+            else if (bI_pacienteTextBox.TextLength != 14)
             {
                 MessageBox.Show("Quantidade de caracteres do BI inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(bI_pacienteTextBox, "Quantidade de caracteres do BI inválido!");
                 bI_pacienteTextBox.Focus();
             }
-            else if(telefone_pacienteTextBox.TextLength != 9)
+            else if(telefone_pacienteTextBox.TextLength != 9 || !telefone_pacienteTextBox.Text.StartsWith("9"))
             {
                 MessageBox.Show("Números do Telefone inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(telefone_pacienteTextBox, "Números do Telefone inválido!");
@@ -154,8 +160,8 @@ namespace SistemaHospitalar2.frmCadastramento
             {
                 if (operacao.Equals("inserir"))
                 {
-                    paciente.inserirPaciente(nome_pacienteTextBox.Text, Convert.ToDateTime(dataNascimento_pacienteDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem),
-                        bI_pacienteTextBox.Text, Convert.ToInt32(telefone_pacienteTextBox.Text), endereco_pacienteTextBox.Text);
+                    paciente.inserirPaciente(nome_pacienteTextBox.Text.Trim(), Convert.ToDateTime(dataNascimento_pacienteDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem),
+                        bI_pacienteTextBox.Text.ToUpper(), Convert.ToInt32(telefone_pacienteTextBox.Text), endereco_pacienteTextBox.Text.TrimStart().TrimEnd());
                     if (paciente.resp.Equals("OK"))
                     {
                         MessageBox.Show("Nova Paciente adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -167,8 +173,8 @@ namespace SistemaHospitalar2.frmCadastramento
                 }
                 else
                 {
-                    paciente.editarPaciente(Convert.ToInt32(codigo), nome_pacienteTextBox.Text, Convert.ToDateTime(dataNascimento_pacienteDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem),
-                        bI_pacienteTextBox.Text, Convert.ToInt32(telefone_pacienteTextBox.Text), endereco_pacienteTextBox.Text);
+                    paciente.editarPaciente(Convert.ToInt32(codigo), nome_pacienteTextBox.Text.Trim(), Convert.ToDateTime(dataNascimento_pacienteDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem),
+                        bI_pacienteTextBox.Text.ToUpper(), Convert.ToInt32(telefone_pacienteTextBox.Text), endereco_pacienteTextBox.Text.TrimStart().TrimEnd());
                     if (paciente.resp.Equals("OK"))
                     {
                         MessageBox.Show("Dados do Paciente actualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

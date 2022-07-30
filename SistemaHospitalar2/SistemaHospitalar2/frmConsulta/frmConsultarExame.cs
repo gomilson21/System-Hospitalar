@@ -19,19 +19,21 @@ namespace SistemaHospitalar2.frmConsulta
         }
         Dados.Listar exame = new Dados.Listar();
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
+        DataTable dados;
+        SqlDataAdapter Adpter;
 
         public void PesquisarExame()
         {
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codExame, nome_exame, descricao_exame, nome_tipoExame FROM Exame INNER JOIN Tipo_Exame ON (Exame.codTipoExame = Tipo_Exame.codTipoExame) WHERE nome_exame LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            DataTable dados = new DataTable();
+            dados = new DataTable();
+            Adpter = new SqlDataAdapter("SELECT codExame, nome_exame, descricao_exame, nome_tipoExame FROM Exame INNER JOIN Tipo_Exame ON (Exame.codTipoExame = Tipo_Exame.codTipoExame) WHERE nome_exame LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             Adpter.Fill(dados);
             exameDataGridView.DataSource = dados;
         }
 
         public void PesquisarTipoExame()
         {
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codExame, nome_exame, descricao_exame, nome_tipoExame FROM Exame INNER JOIN Tipo_Exame ON (Exame.codTipoExame = Tipo_Exame.codTipoExame) WHERE nome_tipoExame LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            DataTable dados = new DataTable();
+            dados = new DataTable();
+            Adpter = new SqlDataAdapter("SELECT codExame, nome_exame, descricao_exame, nome_tipoExame FROM Exame INNER JOIN Tipo_Exame ON (Exame.codTipoExame = Tipo_Exame.codTipoExame) WHERE nome_tipoExame LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             Adpter.Fill(dados);
             exameDataGridView.DataSource = dados;
         }

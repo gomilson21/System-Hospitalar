@@ -184,15 +184,22 @@ namespace SistemaHospitalar2
                 errorProvider1.SetError(bITextBox, "Número do BI inválido!");
                 bITextBox.Focus();
             }
+            // Endereço de Email
+            else if (!emailTextBox.Text.EndsWith("@gmail.com") && !emailTextBox.Text.EndsWith("@hotmail.com"))
+            {
+                MessageBox.Show("Endereço de Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(emailTextBox, "Número do BI inválido!");
+                emailTextBox.Focus();
+            }
             // Número do Telefone
-            else if (telefoneTextBox.TextLength != 9)
+            else if (telefoneTextBox.TextLength != 9 || !telefoneTextBox.Text.StartsWith("9"))
             {
                 MessageBox.Show("Número de telefone inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(telefoneTextBox, "Número de telefone inválido!");
                 telefoneTextBox.Focus();
             }
             // Data de Admissão
-            else if (data_admissaoDateTimePicker.Value.Year != 2022)
+            else if (data_admissaoDateTimePicker.Value != DateTime.Now)
             {
                 MessageBox.Show("Data de Admissão inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(data_admissaoDateTimePicker, "Data de Admissão inválida!");
@@ -205,13 +212,13 @@ namespace SistemaHospitalar2
                 //  Verificando Existência do Número do BI do Funcionario
                 DataTable dados = new DataTable();
                 SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Funcionarios WHERE BI_funcionario = @BI ", Sqlcon);
-                Adpter.SelectCommand.Parameters.AddWithValue("@BI", bITextBox.Text);
+                Adpter.SelectCommand.Parameters.AddWithValue("@BI", bITextBox.Text.ToUpper());
                 Adpter.Fill(dados);
                 Adpter.Dispose();
                 //  Verificando Existência do Endereço de Email do Funcionario
                 DataTable dados1 = new DataTable();
                 SqlDataAdapter Adpter1 = new SqlDataAdapter("SELECT * FROM Funcionarios WHERE email_funcionario = @email ", Sqlcon);
-                Adpter1.SelectCommand.Parameters.AddWithValue("@email", emailTextBox.Text);
+                Adpter1.SelectCommand.Parameters.AddWithValue("@email", emailTextBox.Text.ToLower());
                 Adpter1.Fill(dados1);
                 Adpter1.Dispose();
                 //  Verificando Existência do Númrero da Carteira do Funcionario
@@ -228,7 +235,7 @@ namespace SistemaHospitalar2
                 Adpter3.Dispose();
 
                 Sqlcon.Close();
-                if (operacao == "inserir")
+                if (operacao.Equals("inserir"))
                 {
                     if (dados.Rows.Count != 0)
                     {
@@ -256,9 +263,9 @@ namespace SistemaHospitalar2
                     }
                     else
                     {
-                        funcionarios.inserirFuncionario(nomeTextBox.Text, Convert.ToDateTime(data_nascimentoDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem), bITextBox.Text, emailTextBox.Text,
+                        funcionarios.inserirFuncionario(nomeTextBox.Text, Convert.ToDateTime(data_nascimentoDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem), bITextBox.Text.ToUpper(), emailTextBox.Text.ToLower(),
                          Convert.ToInt32(telefoneTextBox.Text), enderecoTextBox.Text, numero_carteiraTextBox.Text, Convert.ToDateTime(data_admissaoDateTimePicker.Text), Convert.ToInt32(cbCodFuncao.SelectedValue));
-                        if (funcionarios.resp == "OK")
+                        if (funcionarios.resp.Equals("OK"))
                         {
                             MessageBox.Show("Novo funcionario adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.CarregarDados();
@@ -270,9 +277,9 @@ namespace SistemaHospitalar2
                 }
                 else
                 {
-                    funcionarios.editarFuncionario(Convert.ToInt32(codigo), nomeTextBox.Text, Convert.ToDateTime(data_nascimentoDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem), bITextBox.Text, emailTextBox.Text,
+                    funcionarios.editarFuncionario(Convert.ToInt32(codigo), nomeTextBox.Text, Convert.ToDateTime(data_nascimentoDateTimePicker.Text), Convert.ToString(cbSexo.SelectedItem), bITextBox.Text.ToUpper(), emailTextBox.Text.ToLower(),
                          Convert.ToInt32(telefoneTextBox.Text), enderecoTextBox.Text, numero_carteiraTextBox.Text, Convert.ToDateTime(data_admissaoDateTimePicker.Text), Convert.ToInt32(cbCodFuncao.SelectedValue));
-                    if (funcionarios.resp == "OK")
+                    if (funcionarios.resp.Equals("OK"))
                     {
                         MessageBox.Show("Dados do Funcionario actualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.CarregarDados();

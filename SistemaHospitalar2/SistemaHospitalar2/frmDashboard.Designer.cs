@@ -121,9 +121,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefresch = new System.Windows.Forms.Button();
             this.IndicesHospitalar = new System.Windows.Forms.Panel();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalPaciente = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTotalPacInternado = new System.Windows.Forms.Label();
@@ -138,6 +140,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.IndicesHospitalar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1092,8 +1096,9 @@
             // 
             // IndicesHospitalar
             // 
+            this.IndicesHospitalar.Controls.Add(this.gunaCirclePictureBox2);
+            this.IndicesHospitalar.Controls.Add(this.gunaCirclePictureBox1);
             this.IndicesHospitalar.Controls.Add(this.panel5);
-            this.IndicesHospitalar.Controls.Add(this.label2);
             this.IndicesHospitalar.Controls.Add(this.panel6);
             this.IndicesHospitalar.Controls.Add(this.panel3);
             this.IndicesHospitalar.Controls.Add(this.panel4);
@@ -1103,13 +1108,37 @@
             this.IndicesHospitalar.Size = new System.Drawing.Size(832, 160);
             this.IndicesHospitalar.TabIndex = 5;
             // 
+            // gunaCirclePictureBox2
+            // 
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(6, 82);
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(120, 73);
+            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox2.TabIndex = 6;
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.Image = global::SistemaHospitalar2.Properties.Resources.u;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(118, 73);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaCirclePictureBox1.TabIndex = 6;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.lblTotalPaciente);
             this.panel5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(261, 82);
+            this.panel5.Location = new System.Drawing.Point(471, 82);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(249, 73);
             this.panel5.TabIndex = 5;
@@ -1126,15 +1155,15 @@
             this.label1.Text = "Total de Pacientes ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lblTotalPaciente
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(536, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "%";
+            this.lblTotalPaciente.AutoSize = true;
+            this.lblTotalPaciente.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPaciente.Location = new System.Drawing.Point(195, 37);
+            this.lblTotalPaciente.Name = "lblTotalPaciente";
+            this.lblTotalPaciente.Size = new System.Drawing.Size(33, 28);
+            this.lblTotalPaciente.TabIndex = 1;
+            this.lblTotalPaciente.Text = "%";
             // 
             // panel6
             // 
@@ -1143,7 +1172,7 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.lblTotalPacInternado);
             this.panel6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(261, 3);
+            this.panel6.Location = new System.Drawing.Point(471, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(249, 73);
             this.panel6.TabIndex = 4;
@@ -1177,7 +1206,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblTotalMedico);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(6, 3);
+            this.panel3.Location = new System.Drawing.Point(130, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(249, 73);
             this.panel3.TabIndex = 3;
@@ -1211,7 +1240,7 @@
             this.panel4.Controls.Add(this.lblTotalEstagiario);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(6, 82);
+            this.panel4.Location = new System.Drawing.Point(130, 82);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(249, 73);
             this.panel4.TabIndex = 2;
@@ -1262,7 +1291,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.IndicesHospitalar.ResumeLayout(false);
-            this.IndicesHospitalar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1377,10 +1407,12 @@
         private System.Windows.Forms.Button btnName;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalPaciente;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
+        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
+        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
     }
 }

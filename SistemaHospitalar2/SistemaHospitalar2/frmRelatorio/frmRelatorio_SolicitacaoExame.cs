@@ -19,7 +19,6 @@ namespace SistemaHospitalar2.frmRelatorio
         {
             InitializeComponent();
         }
-        public int codMarcacao;
         public int codPacInternado;
         public string operacao = ""; 
 
@@ -30,23 +29,11 @@ namespace SistemaHospitalar2.frmRelatorio
 
         private void frmRelatorio_SolicitacaoExame_Load(object sender, EventArgs e)
         {
-            if(operacao.Equals("Marcação Consulta"))
-            {
-                ReportDocument rd = new ReportDocument();
-                rd.Load(@"C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\Relatorio\crvRelatorioJustificativo_Consulta.rpt");
-                ParameterField parametro = rd.ParameterFields["codMarcacao"];
-                parametro.CurrentValues.AddValue(codMarcacao);
-                crvSolExame.ReportSource = rd;
-            }
-            else if(operacao.Equals("Paciente Internado"))
-            {
-                ReportDocument rd = new ReportDocument();
-                rd.Load(@"C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\Relatorio\crSolicitacaoExame.rpt");
-                ParameterField parametro = rd.ParameterFields["codPacInternado"];
-                parametro.CurrentValues.AddValue(codPacInternado);
-                crvSolExame.ReportSource = rd;
-            }
-    
+            ReportDocument rd = new ReportDocument();
+            rd.Load(@"C:\Z_Gomilson\Gomilson programador\Meus_livros\TREI\Prof. Jc\Pré Projecto\Prático\Software\SistemaHospitalar2\SistemaHospitalar2\Relatorio\crSolicitacaoExame.rpt");
+            ParameterField parametro = rd.ParameterFields["codPacInternado"];
+            parametro.CurrentValues.AddValue(codPacInternado);
+            crvSolExame.ReportSource = rd;
         }
     }
 }

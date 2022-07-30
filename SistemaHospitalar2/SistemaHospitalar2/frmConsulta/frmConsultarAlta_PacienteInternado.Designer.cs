@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
+            this.txtPesquisa = new Guna.UI.WinForms.GunaTextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFormaPesquisa = new System.Windows.Forms.ComboBox();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.altaPacienteDataGridView = new System.Windows.Forms.DataGridView();
@@ -48,37 +48,77 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnActualizar);
             this.groupBox3.Controls.Add(this.btnBuscar);
+            this.groupBox3.Controls.Add(this.txtPesquisa);
+            this.groupBox3.Controls.Add(this.btnActualizar);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.cbFormaPesquisa);
-            this.groupBox3.Controls.Add(this.txtPesquisa);
             this.groupBox3.Location = new System.Drawing.Point(12, 132);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(599, 92);
+            this.groupBox3.Size = new System.Drawing.Size(530, 92);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Faça a sua consulta";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BaseColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderSize = 1;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::SistemaHospitalar2.Properties.Resources.search_26px;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(467, 27);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Radius = 15;
+            this.btnBuscar.Size = new System.Drawing.Size(30, 26);
+            this.btnBuscar.TabIndex = 42;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisa.BaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.BorderColor = System.Drawing.Color.DarkCyan;
+            this.txtPesquisa.BorderSize = 1;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.FocusedBorderColor = System.Drawing.Color.Red;
+            this.txtPesquisa.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPesquisa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(17, 25);
+            this.txtPesquisa.MaxLength = 50;
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.Radius = 18;
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.Size = new System.Drawing.Size(484, 30);
+            this.txtPesquisa.TabIndex = 41;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(497, 58);
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnActualizar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(406, 57);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(95, 30);
             this.btnActualizar.TabIndex = 40;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(517, 25);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 30);
-            this.btnBuscar.TabIndex = 40;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -111,21 +151,13 @@
             this.cbFormaPesquisa.TabIndex = 38;
             this.cbFormaPesquisa.SelectedIndexChanged += new System.EventHandler(this.cbFormaPesquisa_SelectedIndexChanged);
             // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(6, 26);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(506, 26);
-            this.txtPesquisa.TabIndex = 33;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
-            // 
             // btnSair
             // 
             this.btnSair.BackgroundImage = global::SistemaHospitalar2.Properties.Resources.ex4;
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSair.Location = new System.Drawing.Point(631, 143);
+            this.btnSair.Location = new System.Drawing.Point(668, 136);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(71, 68);
+            this.btnSair.Size = new System.Drawing.Size(79, 79);
             this.btnSair.TabIndex = 51;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -136,7 +168,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 235);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(847, 265);
+            this.groupBox2.Size = new System.Drawing.Size(753, 265);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultado";
@@ -150,7 +182,7 @@
             this.altaPacienteDataGridView.Location = new System.Drawing.Point(3, 22);
             this.altaPacienteDataGridView.Name = "altaPacienteDataGridView";
             this.altaPacienteDataGridView.ReadOnly = true;
-            this.altaPacienteDataGridView.Size = new System.Drawing.Size(841, 240);
+            this.altaPacienteDataGridView.Size = new System.Drawing.Size(747, 240);
             this.altaPacienteDataGridView.TabIndex = 32;
             // 
             // groupBox1
@@ -161,7 +193,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(847, 126);
+            this.groupBox1.Size = new System.Drawing.Size(753, 126);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             // 
@@ -170,7 +202,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(290, 45);
+            this.label1.Location = new System.Drawing.Point(211, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(302, 28);
             this.label1.TabIndex = 2;
@@ -181,7 +213,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(465, 87);
+            this.lblLogin.Location = new System.Drawing.Point(368, 88);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(379, 23);
             this.lblLogin.TabIndex = 1;
@@ -191,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 500);
+            this.ClientSize = new System.Drawing.Size(753, 500);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox2);
@@ -219,7 +251,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbFormaPesquisa;
-        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView altaPacienteDataGridView;
@@ -227,6 +258,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnBuscar;
+        private Guna.UI.WinForms.GunaButton btnBuscar;
+        private Guna.UI.WinForms.GunaTextBox txtPesquisa;
     }
 }

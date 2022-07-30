@@ -160,11 +160,17 @@ namespace SistemaHospitalar2
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (telefoneTextBox.TextLength != 9)
+            if (telefoneTextBox.TextLength != 9 || !telefoneTextBox.Text.StartsWith("9"))
             {
                 MessageBox.Show("Número de telefone inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(telefoneTextBox, "Número de telefone inválido!");
                 telefoneTextBox.Focus();
+            }
+            else if (!emailTextBox.Text.EndsWith("@gmail.com") && !emailTextBox.Text.EndsWith("@hotmail.com"))
+            {
+                MessageBox.Show("Endereço de Email inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(emailTextBox, "Endereço de Email inválida!");
+                emailTextBox.Focus();
             }
             else if (inicio_contratoDateTimePicker.Value.Year != 2022)
             {
@@ -191,12 +197,12 @@ namespace SistemaHospitalar2
                 //  Verificando Existência do Endereço de Email do Fornecedor
                 DataTable dados1 = new DataTable();
                 SqlDataAdapter Adpter1 = new SqlDataAdapter("SELECT * FROM Fornecedor WHERE email_fornecedor = @email ", Sqlcon);
-                Adpter1.SelectCommand.Parameters.AddWithValue("@email", emailTextBox.Text);
+                Adpter1.SelectCommand.Parameters.AddWithValue("@email", emailTextBox.Text.ToLower());
                 Adpter1.Fill(dados1);
                 Adpter1.Dispose();
 
                 Sqlcon.Close();
-                if (operacao == "inserir")
+                if (operacao.Equals("inserir"))
                 {
                     if (dados.Rows.Count != 0)
                     {
@@ -213,7 +219,7 @@ namespace SistemaHospitalar2
                     else
                     {
                         fornecedor.inserirFornecedor(nomeTextBox.Text, Convert.ToInt32(telefoneTextBox.Text), enderecoTextBox.Text,
-                            nacionalidadeTextBox.Text, emailTextBox.Text, Convert.ToDateTime(inicio_contratoDateTimePicker.Text), Convert.ToDateTime(fim_contratoDateTimePicker.Text));
+                            nacionalidadeTextBox.Text, emailTextBox.Text.ToLower(), Convert.ToDateTime(inicio_contratoDateTimePicker.Text), Convert.ToDateTime(fim_contratoDateTimePicker.Text));
                         if (fornecedor.resp.Equals("OK"))
                         {
                             MessageBox.Show("Novo fornecedor Adicionado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -227,7 +233,7 @@ namespace SistemaHospitalar2
                 else if (operacao.Equals("editar"))
                 {
                     fornecedor.editarFornecedor(Convert.ToInt32(codFornecedorTextBox.Text), nomeTextBox.Text, Convert.ToInt32(telefoneTextBox.Text),
-                       enderecoTextBox.Text, nacionalidadeTextBox.Text, emailTextBox.Text, Convert.ToDateTime(inicio_contratoDateTimePicker.Text), Convert.ToDateTime(fim_contratoDateTimePicker.Text));
+                       enderecoTextBox.Text, nacionalidadeTextBox.Text, emailTextBox.Text.ToLower(), Convert.ToDateTime(inicio_contratoDateTimePicker.Text), Convert.ToDateTime(fim_contratoDateTimePicker.Text));
                     if (fornecedor.resp.Equals("OK"))
                     {
                         MessageBox.Show("Dados do fornecedor alterado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);

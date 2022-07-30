@@ -140,7 +140,7 @@ namespace SistemaHospitalar2
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             // Número do Telefone da Escola
-            if (telefone_escolaTextBox.TextLength != 9)
+            if (telefone_escolaTextBox.TextLength != 9 || !telefone_escolaTextBox.Text.StartsWith("9"))
             {
                 MessageBox.Show("Número do Telefone inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(telefone_escolaTextBox, "Número do Telefone inválido!");

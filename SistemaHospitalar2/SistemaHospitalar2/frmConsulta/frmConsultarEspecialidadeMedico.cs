@@ -18,12 +18,15 @@ namespace SistemaHospitalar2.frmConsulta
             InitializeComponent();
         }
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
+        DataTable dados;
+        SqlDataAdapter Adapter;
+
 
         public void PesquisarEspMedico()
         {
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Especialidade_Medico WHERE nome LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            DataTable dados = new DataTable();
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Especialidade_Medico WHERE nome_especialidade LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados);
             especialidadeMedicoDataGridView.DataSource = dados;
         }
 

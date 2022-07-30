@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbFormaPesquisa = new System.Windows.Forms.ComboBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.estagiarioDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbFormaPesquisa = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
+            this.txtPesquisa = new Guna.UI.WinForms.GunaTextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.estagiarioDataGridView)).BeginInit();
@@ -46,9 +48,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBuscar);
+            this.groupBox3.Controls.Add(this.txtPesquisa);
+            this.groupBox3.Controls.Add(this.btnActualizar);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.cbFormaPesquisa);
-            this.groupBox3.Controls.Add(this.txtPesquisa);
             this.groupBox3.Location = new System.Drawing.Point(12, 113);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 88);
@@ -56,22 +60,40 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Faça a sua consulta";
             // 
-            // txtPesquisa
+            // label2
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(6, 22);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(466, 26);
-            this.txtPesquisa.TabIndex = 33;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 18);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Consultar por:";
+            // 
+            // cbFormaPesquisa
+            // 
+            this.cbFormaPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFormaPesquisa.FormattingEnabled = true;
+            this.cbFormaPesquisa.Items.AddRange(new object[] {
+            "Data de Admissão",
+            "Data de Nascimento",
+            "Nome da Escola",
+            "Nome do Estagiario",
+            "Sexo"});
+            this.cbFormaPesquisa.Location = new System.Drawing.Point(135, 56);
+            this.cbFormaPesquisa.Name = "cbFormaPesquisa";
+            this.cbFormaPesquisa.Size = new System.Drawing.Size(264, 26);
+            this.cbFormaPesquisa.Sorted = true;
+            this.cbFormaPesquisa.TabIndex = 36;
+            this.cbFormaPesquisa.SelectedIndexChanged += new System.EventHandler(this.cbFormaPesquisa_SelectedIndexChanged);
             // 
             // btnSair
             // 
             this.btnSair.BackgroundImage = global::SistemaHospitalar2.Properties.Resources.ex4;
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSair.Location = new System.Drawing.Point(660, 114);
+            this.btnSair.Location = new System.Drawing.Point(660, 113);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(76, 60);
+            this.btnSair.Size = new System.Drawing.Size(76, 64);
             this.btnSair.TabIndex = 50;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -140,30 +162,65 @@
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Consultar Estagiario";
             // 
-            // label2
+            // btnBuscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 18);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Consultar por:";
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BaseColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderSize = 1;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::SistemaHospitalar2.Properties.Resources.search_26px;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(466, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Radius = 15;
+            this.btnBuscar.Size = new System.Drawing.Size(30, 26);
+            this.btnBuscar.TabIndex = 45;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // cbFormaPesquisa
+            // txtPesquisa
             // 
-            this.cbFormaPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFormaPesquisa.FormattingEnabled = true;
-            this.cbFormaPesquisa.Items.AddRange(new object[] {
-            "Data de Admissão",
-            "Data de Nascimento",
-            "Nome da Escola",
-            "Nome do Estagiario",
-            "Sexo"});
-            this.cbFormaPesquisa.Location = new System.Drawing.Point(135, 56);
-            this.cbFormaPesquisa.Name = "cbFormaPesquisa";
-            this.cbFormaPesquisa.Size = new System.Drawing.Size(264, 26);
-            this.cbFormaPesquisa.Sorted = true;
-            this.cbFormaPesquisa.TabIndex = 36;
+            this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisa.BaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.BorderColor = System.Drawing.Color.DarkCyan;
+            this.txtPesquisa.BorderSize = 1;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.FocusedBorderColor = System.Drawing.Color.Red;
+            this.txtPesquisa.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPesquisa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(16, 22);
+            this.txtPesquisa.MaxLength = 50;
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.Radius = 18;
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.Size = new System.Drawing.Size(484, 30);
+            this.txtPesquisa.TabIndex = 44;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnActualizar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(405, 54);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(95, 30);
+            this.btnActualizar.TabIndex = 43;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmConsultarEstagiario
             // 
@@ -195,7 +252,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView estagiarioDataGridView;
@@ -204,5 +260,8 @@
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbFormaPesquisa;
+        private Guna.UI.WinForms.GunaButton btnBuscar;
+        private Guna.UI.WinForms.GunaTextBox txtPesquisa;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

@@ -19,12 +19,14 @@ namespace SistemaHospitalar2.frmConsulta
         }
 
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
+        DataTable dados;
+        SqlDataAdapter Adapter;
 
         public void PesquisarTratamento()
         {
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Tratamento WHERE nome LIKE '%"+ txtPesquisa.Text +"%'", Sqlcon);
-            DataTable dados = new DataTable();
-            Adpter.Fill(dados);
+            dados = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT * FROM Tratamento WHERE nome_tratamento LIKE '%"+ txtPesquisa.Text +"%'", Sqlcon);
+            Adapter.Fill(dados);
             tratamentoDataGridView.DataSource = dados;
         }
 
@@ -32,7 +34,6 @@ namespace SistemaHospitalar2.frmConsulta
         {
             // TODO: This line of code loads data into the 'db_HospitalDataSet.Tratamento' table. You can move, or remove it, as needed.
             this.tratamentoTableAdapter.Fill(this.db_HospitalDataSet.Tratamento);
-
             txtPesquisa.Focus();
         }
 

@@ -47,6 +47,7 @@
             this.telefoneescolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoescolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.telefone_escolaTextBox = new System.Windows.Forms.MaskedTextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.codEscolaTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.escolaTableAdapter = new SistemaHospitalar2.db_HospitalDataSetTableAdapters.EscolaTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableAdapterManager = new SistemaHospitalar2.db_HospitalDataSetTableAdapters.TableAdapterManager();
-            this.telefone_escolaTextBox = new System.Windows.Forms.MaskedTextBox();
             codEscolaLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             nIFLabel = new System.Windows.Forms.Label();
@@ -266,10 +266,19 @@
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             // 
+            // telefone_escolaTextBox
+            // 
+            this.telefone_escolaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "telefone_escola", true));
+            this.telefone_escolaTextBox.Location = new System.Drawing.Point(132, 119);
+            this.telefone_escolaTextBox.Mask = "900000000";
+            this.telefone_escolaTextBox.Name = "telefone_escolaTextBox";
+            this.telefone_escolaTextBox.Size = new System.Drawing.Size(268, 27);
+            this.telefone_escolaTextBox.TabIndex = 76;
+            // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Location = new System.Drawing.Point(8, 155);
+            this.lblEndereco.Location = new System.Drawing.Point(15, 152);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(89, 18);
             this.lblEndereco.TabIndex = 75;
@@ -305,10 +314,10 @@
             // enderecoTextBox
             // 
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "endereco_escola", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(103, 152);
+            this.enderecoTextBox.Location = new System.Drawing.Point(110, 152);
             this.enderecoTextBox.Name = "enderecoTextBox";
             this.enderecoTextBox.ReadOnly = true;
-            this.enderecoTextBox.Size = new System.Drawing.Size(297, 27);
+            this.enderecoTextBox.Size = new System.Drawing.Size(290, 27);
             this.enderecoTextBox.TabIndex = 73;
             // 
             // btnNovo
@@ -474,15 +483,6 @@
             this.tableAdapterManager.TratamentoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaHospitalar2.db_HospitalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // telefone_escolaTextBox
-            // 
-            this.telefone_escolaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.escolaBindingSource, "telefone_escola", true));
-            this.telefone_escolaTextBox.Location = new System.Drawing.Point(132, 119);
-            this.telefone_escolaTextBox.Mask = "900000000";
-            this.telefone_escolaTextBox.Name = "telefone_escolaTextBox";
-            this.telefone_escolaTextBox.Size = new System.Drawing.Size(268, 27);
-            this.telefone_escolaTextBox.TabIndex = 76;
             // 
             // frmCadastrarEscola
             // 

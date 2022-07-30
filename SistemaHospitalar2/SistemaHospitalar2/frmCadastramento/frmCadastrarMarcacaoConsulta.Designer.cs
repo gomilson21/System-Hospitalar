@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCodMarcacao = new System.Windows.Forms.Label();
             this.lblCodTipo_Consulta = new System.Windows.Forms.Label();
             this.lblCodMedico = new System.Windows.Forms.Label();
@@ -39,14 +39,9 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.marcacaoConsultaDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DiasRepouso = new System.Windows.Forms.NumericUpDown();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnJustificativo = new System.Windows.Forms.Button();
-            this.btnSolExame = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.cbCodPaciente = new System.Windows.Forms.ComboBox();
             this.dtpHoraConsulta = new System.Windows.Forms.DateTimePicker();
-            this.lblDiasRepouso = new System.Windows.Forms.Label();
             this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.codMarcacaoTextBox = new System.Windows.Forms.TextBox();
             this.lblNome_doente = new System.Windows.Forms.Label();
@@ -72,8 +67,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.marcacaoConsultaDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiasRepouso)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -144,17 +137,17 @@
             this.marcacaoConsultaDataGridView.Name = "marcacaoConsultaDataGridView";
             this.marcacaoConsultaDataGridView.ReadOnly = true;
             this.marcacaoConsultaDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.marcacaoConsultaDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.marcacaoConsultaDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.marcacaoConsultaDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.marcacaoConsultaDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.marcacaoConsultaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.marcacaoConsultaDataGridView.Size = new System.Drawing.Size(754, 186);
             this.marcacaoConsultaDataGridView.TabIndex = 37;
@@ -162,12 +155,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.DiasRepouso);
-            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.btnRelatorio);
             this.groupBox2.Controls.Add(this.cbCodPaciente);
             this.groupBox2.Controls.Add(this.dtpHoraConsulta);
             this.groupBox2.Controls.Add(this.lblHora);
-            this.groupBox2.Controls.Add(this.lblDiasRepouso);
             this.groupBox2.Controls.Add(this.lblData);
             this.groupBox2.Controls.Add(this.dataDateTimePicker);
             this.groupBox2.Controls.Add(this.lblCodMarcacao);
@@ -187,64 +178,20 @@
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 318);
+            this.groupBox2.Location = new System.Drawing.Point(0, 312);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(754, 350);
+            this.groupBox2.Size = new System.Drawing.Size(754, 311);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
-            // 
-            // DiasRepouso
-            // 
-            this.DiasRepouso.Location = new System.Drawing.Point(171, 288);
-            this.DiasRepouso.Name = "DiasRepouso";
-            this.DiasRepouso.Size = new System.Drawing.Size(60, 27);
-            this.DiasRepouso.TabIndex = 19;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnJustificativo);
-            this.groupBox4.Controls.Add(this.btnSolExame);
-            this.groupBox4.Controls.Add(this.btnRelatorio);
-            this.groupBox4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(237, 282);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(514, 62);
-            this.groupBox4.TabIndex = 99;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Acção";
-            // 
-            // btnJustificativo
-            // 
-            this.btnJustificativo.BackColor = System.Drawing.Color.Red;
-            this.btnJustificativo.ForeColor = System.Drawing.Color.White;
-            this.btnJustificativo.Location = new System.Drawing.Point(215, 17);
-            this.btnJustificativo.Name = "btnJustificativo";
-            this.btnJustificativo.Size = new System.Drawing.Size(135, 34);
-            this.btnJustificativo.TabIndex = 33;
-            this.btnJustificativo.Text = "Justificativo";
-            this.btnJustificativo.UseVisualStyleBackColor = false;
-            this.btnJustificativo.Click += new System.EventHandler(this.btnJustificativo_Click);
-            // 
-            // btnSolExame
-            // 
-            this.btnSolExame.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSolExame.ForeColor = System.Drawing.Color.White;
-            this.btnSolExame.Location = new System.Drawing.Point(17, 17);
-            this.btnSolExame.Name = "btnSolExame";
-            this.btnSolExame.Size = new System.Drawing.Size(192, 34);
-            this.btnSolExame.TabIndex = 32;
-            this.btnSolExame.Text = "Solicitação de Exame";
-            this.btnSolExame.UseVisualStyleBackColor = false;
-            this.btnSolExame.Click += new System.EventHandler(this.btnSolExame_Click);
             // 
             // btnRelatorio
             // 
             this.btnRelatorio.BackColor = System.Drawing.Color.DarkCyan;
             this.btnRelatorio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(356, 17);
+            this.btnRelatorio.Location = new System.Drawing.Point(509, 274);
             this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(156, 34);
+            this.btnRelatorio.Size = new System.Drawing.Size(239, 34);
             this.btnRelatorio.TabIndex = 34;
             this.btnRelatorio.Text = "Emitir Relatório";
             this.btnRelatorio.UseVisualStyleBackColor = false;
@@ -266,15 +213,6 @@
             this.dtpHoraConsulta.Name = "dtpHoraConsulta";
             this.dtpHoraConsulta.Size = new System.Drawing.Size(200, 27);
             this.dtpHoraConsulta.TabIndex = 15;
-            // 
-            // lblDiasRepouso
-            // 
-            this.lblDiasRepouso.AutoSize = true;
-            this.lblDiasRepouso.Location = new System.Drawing.Point(12, 290);
-            this.lblDiasRepouso.Name = "lblDiasRepouso";
-            this.lblDiasRepouso.Size = new System.Drawing.Size(153, 18);
-            this.lblDiasRepouso.TabIndex = 83;
-            this.lblDiasRepouso.Text = "Dias de Repouso:";
             // 
             // dataDateTimePicker
             // 
@@ -499,7 +437,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(754, 668);
+            this.ClientSize = new System.Drawing.Size(754, 623);
             this.Controls.Add(this.marcacaoConsultaDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -514,8 +452,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.marcacaoConsultaDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiasRepouso)).EndInit();
-            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -561,10 +497,5 @@
         private System.Windows.Forms.ComboBox cbCodPaciente;
         private System.Windows.Forms.DateTimePicker dtpHoraConsulta;
         private System.Windows.Forms.Label lblNome_doente;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnJustificativo;
-        private System.Windows.Forms.Button btnSolExame;
-        private System.Windows.Forms.NumericUpDown DiasRepouso;
-        private System.Windows.Forms.Label lblDiasRepouso;
     }
 }

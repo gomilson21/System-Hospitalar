@@ -38,11 +38,11 @@
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label inicio_contratoLabel;
             System.Windows.Forms.Label fim_contratoLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fornecedorDataGridView = new System.Windows.Forms.DataGridView();
             this.codFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome_fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,7 @@
             this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_HospitalDataSet = new SistemaHospitalar2.db_HospitalDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.telefoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.codFornecedorTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
@@ -83,7 +84,6 @@
             this.tableAdapterManager = new SistemaHospitalar2.db_HospitalDataSetTableAdapters.TableAdapterManager();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.telefoneTextBox = new System.Windows.Forms.MaskedTextBox();
             codMedicoLabel = new System.Windows.Forms.Label();
             codFornecedorLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             // telefoneLabel
             // 
             telefoneLabel.AutoSize = true;
-            telefoneLabel.Location = new System.Drawing.Point(12, 125);
+            telefoneLabel.Location = new System.Drawing.Point(7, 127);
             telefoneLabel.Name = "telefoneLabel";
             telefoneLabel.Size = new System.Drawing.Size(84, 18);
             telefoneLabel.TabIndex = 66;
@@ -190,14 +190,14 @@
             this.fornecedorDataGridView.AllowUserToDeleteRows = false;
             this.fornecedorDataGridView.AutoGenerateColumns = false;
             this.fornecedorDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fornecedorDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fornecedorDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.fornecedorDataGridView.ColumnHeadersHeight = 30;
             this.fornecedorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codFornecedorDataGridViewTextBoxColumn,
@@ -209,14 +209,14 @@
             this.iniciocontratoDataGridViewTextBoxColumn,
             this.fimcontratoDataGridViewTextBoxColumn});
             this.fornecedorDataGridView.DataSource = this.fornecedorBindingSource;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.fornecedorDataGridView.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fornecedorDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
             this.fornecedorDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.fornecedorDataGridView.Location = new System.Drawing.Point(0, 126);
             this.fornecedorDataGridView.Name = "fornecedorDataGridView";
@@ -228,8 +228,8 @@
             // codFornecedorDataGridViewTextBoxColumn
             // 
             this.codFornecedorDataGridViewTextBoxColumn.DataPropertyName = "codFornecedor";
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codFornecedorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codFornecedorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.codFornecedorDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codFornecedorDataGridViewTextBoxColumn.Name = "codFornecedorDataGridViewTextBoxColumn";
             this.codFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
@@ -278,10 +278,10 @@
             // iniciocontratoDataGridViewTextBoxColumn
             // 
             this.iniciocontratoDataGridViewTextBoxColumn.DataPropertyName = "inicio_contrato";
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.Format = "d";
-            dataGridViewCellStyle18.NullValue = null;
-            this.iniciocontratoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.iniciocontratoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.iniciocontratoDataGridViewTextBoxColumn.HeaderText = "Início do Contrato";
             this.iniciocontratoDataGridViewTextBoxColumn.Name = "iniciocontratoDataGridViewTextBoxColumn";
             this.iniciocontratoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -290,8 +290,8 @@
             // fimcontratoDataGridViewTextBoxColumn
             // 
             this.fimcontratoDataGridViewTextBoxColumn.DataPropertyName = "fim_contrato";
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fimcontratoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fimcontratoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.fimcontratoDataGridViewTextBoxColumn.HeaderText = "Fim do Contrato";
             this.fimcontratoDataGridViewTextBoxColumn.Name = "fimcontratoDataGridViewTextBoxColumn";
             this.fimcontratoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -340,6 +340,14 @@
             this.groupBox2.Size = new System.Drawing.Size(936, 268);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
+            // 
+            // telefoneTextBox
+            // 
+            this.telefoneTextBox.Location = new System.Drawing.Point(97, 121);
+            this.telefoneTextBox.Mask = "900000000";
+            this.telefoneTextBox.Name = "telefoneTextBox";
+            this.telefoneTextBox.Size = new System.Drawing.Size(212, 27);
+            this.telefoneTextBox.TabIndex = 78;
             // 
             // codFornecedorTextBox
             // 
@@ -625,14 +633,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // telefoneTextBox
-            // 
-            this.telefoneTextBox.Location = new System.Drawing.Point(143, 125);
-            this.telefoneTextBox.Mask = "900000000";
-            this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(175, 27);
-            this.telefoneTextBox.TabIndex = 78;
             // 
             // frmCadastrarFornecedor
             // 

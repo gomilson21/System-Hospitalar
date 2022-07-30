@@ -33,12 +33,13 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbFormaPesquisa = new System.Windows.Forms.ComboBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbFormaPesquisa = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
+            this.txtPesquisa = new Guna.UI.WinForms.GunaTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -93,9 +94,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBuscar);
+            this.groupBox3.Controls.Add(this.txtPesquisa);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.cbFormaPesquisa);
-            this.groupBox3.Controls.Add(this.txtPesquisa);
             this.groupBox3.Location = new System.Drawing.Point(12, 132);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(572, 93);
@@ -103,13 +105,28 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Faça a sua consulta";
             // 
-            // txtPesquisa
+            // label2
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(6, 26);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(491, 27);
-            this.txtPesquisa.TabIndex = 33;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 18);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Consultar por:";
+            // 
+            // cbFormaPesquisa
+            // 
+            this.cbFormaPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFormaPesquisa.FormattingEnabled = true;
+            this.cbFormaPesquisa.Items.AddRange(new object[] {
+            "Login do Usuário",
+            "Nome da Função",
+            "Nome do Funcionário"});
+            this.cbFormaPesquisa.Location = new System.Drawing.Point(134, 59);
+            this.cbFormaPesquisa.Name = "cbFormaPesquisa";
+            this.cbFormaPesquisa.Size = new System.Drawing.Size(264, 26);
+            this.cbFormaPesquisa.Sorted = true;
+            this.cbFormaPesquisa.TabIndex = 38;
             // 
             // btnSair
             // 
@@ -145,28 +162,51 @@
             this.usuarioDataGridView.Size = new System.Drawing.Size(689, 240);
             this.usuarioDataGridView.TabIndex = 32;
             // 
-            // label2
+            // btnBuscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 18);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Consultar por:";
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BaseColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderSize = 1;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::SistemaHospitalar2.Properties.Resources.search_26px;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(465, 25);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Radius = 15;
+            this.btnBuscar.Size = new System.Drawing.Size(30, 26);
+            this.btnBuscar.TabIndex = 45;
             // 
-            // cbFormaPesquisa
+            // txtPesquisa
             // 
-            this.cbFormaPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFormaPesquisa.FormattingEnabled = true;
-            this.cbFormaPesquisa.Items.AddRange(new object[] {
-            "Login do Usuário",
-            "Nome da Função",
-            "Nome do Funcionário"});
-            this.cbFormaPesquisa.Location = new System.Drawing.Point(134, 59);
-            this.cbFormaPesquisa.Name = "cbFormaPesquisa";
-            this.cbFormaPesquisa.Size = new System.Drawing.Size(264, 26);
-            this.cbFormaPesquisa.Sorted = true;
-            this.cbFormaPesquisa.TabIndex = 38;
+            this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisa.BaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.BorderColor = System.Drawing.Color.DarkCyan;
+            this.txtPesquisa.BorderSize = 1;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPesquisa.FocusedBorderColor = System.Drawing.Color.Red;
+            this.txtPesquisa.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPesquisa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(15, 23);
+            this.txtPesquisa.MaxLength = 50;
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.Radius = 18;
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.Size = new System.Drawing.Size(484, 30);
+            this.txtPesquisa.TabIndex = 44;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // frmConsultarUsuario
             // 
@@ -203,11 +243,12 @@
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView usuarioDataGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbFormaPesquisa;
+        private Guna.UI.WinForms.GunaButton btnBuscar;
+        private Guna.UI.WinForms.GunaTextBox txtPesquisa;
     }
 }

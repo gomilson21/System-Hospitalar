@@ -19,38 +19,40 @@ namespace SistemaHospitalar2.frmConsulta
         }
         Dados.Listar dados = new Dados.Listar();
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
+        DataTable dados1;
+        SqlDataAdapter Adapter;
 
-        private void MostarBotao()
+        private void HabilitarBotao()
         {
             if(cbFormaPesquisa.SelectedItem.Equals("Data da Alta"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else if (cbFormaPesquisa.SelectedItem.Equals("Data da Internação"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else if (cbFormaPesquisa.SelectedItem.Equals("Data de Regresso"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else if (cbFormaPesquisa.SelectedItem.Equals("Hora da Alta"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else if (cbFormaPesquisa.SelectedItem.Equals("Hora da Internação"))
             {
-                btnBuscar.Show();
-                btnActualizar.Show();
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
             }
             else
             {
-                btnBuscar.Hide();
-                btnActualizar.Hide();
+                btnBuscar.Enabled = false;
+                btnActualizar.Enabled = false;
             }
         }
 
@@ -61,74 +63,82 @@ namespace SistemaHospitalar2.frmConsulta
         // Nome do Paciente
         public void PesquisarNomePaciente()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE nome_paciente LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE nome_paciente LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Nome da Quarto
         public void PesquisarNomeQuarto()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE nome_quarto LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE nome_quarto LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Nome do Tramento
         public void PesquisarNomeTratamento()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE nome_tratamento LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE nome_tratamento LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
+        }
+        // Nome do Médico
+        public void PesquisarNomeMedico()
+        {
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE nome_medico LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Número da Cama
         public void PesquisarNumeroCama()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE numeroCama_PacienteInternado = '" + Convert.ToInt32(txtPesquisa.Text) + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE numeroCama_PacienteInternado = '" + Convert.ToInt32(txtPesquisa.Text) + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Data da Alta
         public void PesquisarDataAlta()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE data_alta = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE data_alta = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Data da Internacao
         public void PesquisarDataInternacao()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE data_internacao = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE data_internacao = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Data de Regresso
         public void PesquisarDataRegresso()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE data_regresso = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE data_regresso = '" + Convert.ToDateTime(txtPesquisa.Text) + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Hora da Alta
         public void PesquisarHoraAlta()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE hora_alta = '" + txtPesquisa.Text + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE hora_alta = '" + txtPesquisa.Text + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
         // Hora da Internação
         public void PesquisarHoraInternacao()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) WHERE hora_internacao = '" + txtPesquisa.Text + "'", Sqlcon);
-            Adpter.Fill(dados);
-            altaPacienteDataGridView.DataSource = dados;
+            dados1 = new DataTable();
+            Adapter = new SqlDataAdapter("SELECT codAlta, nome_paciente, nome_quarto, numeroCama_PacienteInternado, nome_tratamento, nome_medico, data_internacao, hora_internacao, data_alta, hora_alta, data_regresso, dias_repouso, descricao_alta FROM Alta_Paciente_Internado INNER JOIN Paciente_Internado ON (Alta_Paciente_Internado.codPacienteInternado = Paciente_Internado.codPacienteInternado) INNER JOIN Paciente ON (Paciente_Internado.codPaciente = Paciente.codPaciente) INNER JOIN Quarto ON (Quarto.codQuarto = Paciente_Internado.codQuarto) INNER JOIN Tratamento ON (Tratamento.codTratamento = Paciente_Internado.codTratamento) INNER JOIN Medico ON (Medico.codMedico = Paciente_Internado.codMedico) WHERE WHERE hora_internacao = '" + txtPesquisa.Text + "'", Sqlcon);
+            Adapter.Fill(dados1);
+            altaPacienteDataGridView.DataSource = dados1;
         }
 
         private void frmConsultarAlta_PacienteInternado_Load(object sender, EventArgs e)
@@ -147,22 +157,14 @@ namespace SistemaHospitalar2.frmConsulta
             else if (cbFormaPesquisa.SelectedItem.Equals("Número da Cama"))
                 this.PesquisarNumeroCama();
             else if (cbFormaPesquisa.SelectedItem.Equals("Nome do Tratamento"))
+                this.PesquisarNomeMedico();
+            else if (cbFormaPesquisa.SelectedItem.Equals("Nome do Médico"))
                 this.PesquisarNomeTratamento();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmConsultarAlta_PacienteInternado_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Referencias_Formularios.conAltaPaciente = null;
         }
 
         private void cbFormaPesquisa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.MostarBotao();
+            this.HabilitarBotao();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -182,6 +184,19 @@ namespace SistemaHospitalar2.frmConsulta
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             txtPesquisa.Clear();
+            this.CarregarDados();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmConsultarAlta_PacienteInternado_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Referencias_Formularios.conAltaPaciente = null;
+        }
+
+       
     }
 }

@@ -21,7 +21,7 @@ namespace SistemaHospitalar2.frmConsulta
 
         public void PesquisarEscola()
         {
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Escola WHERE nome LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Escola WHERE nome_escola LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             DataTable dados = new DataTable();
             Adpter.Fill(dados);
             escolaDataGridView.DataSource = dados;
@@ -31,7 +31,6 @@ namespace SistemaHospitalar2.frmConsulta
         {
             // TODO: This line of code loads data into the 'db_HospitalDataSet1.Escola' table. You can move, or remove it, as needed.
             this.escolaTableAdapter.Fill(this.db_HospitalDataSet1.Escola);
-
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)

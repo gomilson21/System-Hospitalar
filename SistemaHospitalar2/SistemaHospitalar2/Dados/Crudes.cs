@@ -873,8 +873,7 @@ namespace SistemaHospitalar2
 
         //  Marcação de Consulta
         //                  INSERIR
-        public void inserirMarcacaoConsulta(int codPaciente, int codTipoConsulta, int codMedico, 
-            DateTime data, string hora, int dias_repouso, string descricao)
+        public void inserirMarcacaoConsulta(int codPaciente, int codTipoConsulta, int codMedico, DateTime data, string hora, string descricao)
         {
             cmd.Connection = conect.AbrirConexao();
             try
@@ -886,7 +885,6 @@ namespace SistemaHospitalar2
                 cmd.Parameters.AddWithValue("@codMedico", codMedico);
                 cmd.Parameters.AddWithValue("@data", data);
                 cmd.Parameters.AddWithValue("@hora", hora);
-                cmd.Parameters.AddWithValue("@dias_repouso", dias_repouso);
                 cmd.Parameters.AddWithValue("@descricao", descricao);
                 resp = cmd.ExecuteNonQuery() == 1 ? "OK" : "Erro ao tentar adicionar uma novo Marcação de Consulta!";
                 cmd.Parameters.Clear();
@@ -901,8 +899,7 @@ namespace SistemaHospitalar2
             }
         }
         //              EDITAR
-        public void editarMarcacaoConsulta(int codMarcacao, int codPaciente, int codTipoConsulta, 
-            int codMedico, DateTime data, string hora, int dias_repouso, string descricao)
+        public void editarMarcacaoConsulta(int codMarcacao, int codPaciente, int codTipoConsulta, int codMedico, DateTime data, string hora, string descricao)
         {
             cmd.Connection = conect.AbrirConexao();
             try
@@ -915,7 +912,6 @@ namespace SistemaHospitalar2
                 cmd.Parameters.AddWithValue("@codMedico", codMedico);
                 cmd.Parameters.AddWithValue("@data", data);
                 cmd.Parameters.AddWithValue("@hora", hora);
-                cmd.Parameters.AddWithValue("@dias_repouso", dias_repouso);
                 cmd.Parameters.AddWithValue("@descricao", descricao);
                 resp = cmd.ExecuteNonQuery() == 1 ? "OK" : "Erro ao tentar actualizar os dados da Marcação de Consulta!";
                 cmd.Parameters.Clear();

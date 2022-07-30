@@ -19,17 +19,19 @@ namespace SistemaHospitalar2
             string estado_usuario = "Activo";
             string funcao_usuario = "Administrativo";
             SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
-            Sqlcon.Open();
+            DataTable dados = new DataTable();
+            SqlDataAdapter Adapter;
 
             try
             {
-                DataTable dados = new DataTable();
-                SqlDataAdapter Adpter = new SqlDataAdapter("SELECT * FROM Usuario WHERE login_usuario = @login AND senha_usuario = @senha AND estado_usuario = @estado_usuario", Sqlcon);
-                Adpter.SelectCommand.Parameters.AddWithValue("@login", txtLogin.Text);
-                Adpter.SelectCommand.Parameters.AddWithValue("@senha", txtSenha.Text);
-                Adpter.SelectCommand.Parameters.AddWithValue("@estado_usuario", estado_usuario);
-                Adpter.Fill(dados);
-                Adpter.Dispose();
+                Sqlcon.Open();
+
+                Adapter = new SqlDataAdapter("SELECT * FROM Usuario WHERE login_usuario = @login AND senha_usuario = @senha AND estado_usuario = @estado_usuario", Sqlcon);
+                Adapter.SelectCommand.Parameters.AddWithValue("@login", txtLogin.Text);
+                Adapter.SelectCommand.Parameters.AddWithValue("@senha", txtSenha.Text);
+                Adapter.SelectCommand.Parameters.AddWithValue("@estado_usuario", estado_usuario);
+                Adapter.Fill(dados);
+                Adapter.Dispose();
 
                 //Verificando o login
                 if (tentativa != 0)
@@ -50,14 +52,13 @@ namespace SistemaHospitalar2
                     }
                     else
                     {
-                        DataTable dados1 = new DataTable();
-                        SqlDataAdapter Adpter1 = new SqlDataAdapter("SELECT login_usuario, nome_funcao FROM Usuario INNER JOIN Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) WHERE login_usuario = @login AND nome_funcao = @funcao", Sqlcon);
-                        Adpter1.SelectCommand.Parameters.AddWithValue("@login", txtLogin.Text);
-                        Adpter1.SelectCommand.Parameters.AddWithValue("@funcao", funcao_usuario);
-                        Adpter1.Fill(dados1);
-                        Adpter1.Dispose();
+                        Adapter = new SqlDataAdapter("SELECT login_usuario, nome_funcao FROM Usuario INNER JOIN Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) WHERE login_usuario = @login AND nome_funcao = @funcao", Sqlcon);
+                        Adapter.SelectCommand.Parameters.AddWithValue("@login", txtLogin.Text);
+                        Adapter.SelectCommand.Parameters.AddWithValue("@funcao", funcao_usuario);
+                        Adapter.Fill(dados);
+                        Adapter.Dispose();
 
-                        if (dados1.Rows.Count == 0)
+                        if (dados.Rows.Count == 0)
                         {
                             funcao_usuario = "Catalogador";
                             if (Referencias_Formularios.dash == null)

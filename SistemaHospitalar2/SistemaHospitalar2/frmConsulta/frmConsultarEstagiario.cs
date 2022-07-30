@@ -20,6 +20,25 @@ namespace SistemaHospitalar2.frmConsulta
         Dados.Listar dados = new Dados.Listar();
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
 
+        private void HabilitarBotao()
+        {
+            if (cbFormaPesquisa.SelectedItem.Equals("Data de Nascimento"))
+            {
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
+            }
+            else if (cbFormaPesquisa.SelectedItem.Equals("Data de Admissão"))
+            {
+                btnBuscar.Enabled = true;
+                btnActualizar.Enabled = true;
+            }
+            else
+            {
+                btnBuscar.Enabled = false;
+                btnActualizar.Enabled = false;
+            }
+        }
+
         public void CarregarDados()
         {
             estagiarioDataGridView.DataSource = dados.ListarEstagiario();
@@ -84,6 +103,25 @@ namespace SistemaHospitalar2.frmConsulta
                 this.PesquisarDataAdmissao();
             else if (cbFormaPesquisa.SelectedItem.Equals("Nome da Escola"))
                 this.PesquisarNomeEscola();
+        }
+
+        private void cbFormaPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.HabilitarBotao();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (cbFormaPesquisa.SelectedItem.Equals("Data de Nascimento"))
+                this.PesquisarDataNascimento();
+            else if (cbFormaPesquisa.SelectedItem.Equals("Data de Admissão"))
+                this.PesquisarDataAdmissao();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            txtPesquisa.Clear();
+            this.CarregarDados();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

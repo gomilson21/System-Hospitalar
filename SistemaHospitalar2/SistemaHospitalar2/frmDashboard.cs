@@ -137,37 +137,41 @@ namespace SistemaHospitalar2
             }          
         }
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
-        
+        SqlCommand cmd;
+        // Buscando total de Médicos na base de dados
         public void TotalMedico()
         {
             Sqlcon.Open();
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT COUNT(*) FROM Medico", Sqlcon);
-            Adpter.Fill(dados);
-            Adpter.Dispose();
+            cmd = new SqlCommand("SELECT COUNT(*) FROM Medico", Sqlcon);            
+            lblTotalMedico.Text = Convert.ToString(cmd.ExecuteScalar());
+            cmd.Dispose();
             Sqlcon.Close();
-            lblTotalMedico.Text = dados.Rows.Count.ToString();
         }
-
+        // Buscando total de Estagiários na base de dados
         public void TotalEstagiario()
         {
             Sqlcon.Open();
-            DataTable dados1 = new DataTable();
-            SqlDataAdapter Adpter1 = new SqlDataAdapter("SELECT COUNT(*) FROM Estagiario", Sqlcon);
-            Adpter1.Fill(dados1);
-            Adpter1.Dispose();
+            cmd = new SqlCommand("SELECT COUNT(*) FROM Estagiario", Sqlcon);
+            lblTotalEstagiario.Text = Convert.ToString(cmd.ExecuteScalar());
+            cmd.Dispose();
             Sqlcon.Close();
-            lblTotalEstagiario.Text = dados1.Rows.Count.ToString();
         }
-        
+        // Buscando total de Pacientes na base de dados
+        public void TotalPaciente()
+        {
+            Sqlcon.Open();
+            cmd = new SqlCommand("SELECT COUNT(*) FROM Paciente", Sqlcon);
+            lblTotalPaciente.Text = Convert.ToString(cmd.ExecuteScalar());
+            cmd.Dispose();
+            Sqlcon.Close();
+        }
+        // Buscando total de Pacientes Intennados na base de dados
         public void TotalPacienteInternado()
         {
             Sqlcon.Open();
-            DataTable dados2 = new DataTable();
-            SqlDataAdapter Adpter2 = new SqlDataAdapter("SELECT COUNT(*) FROM Paciente_Internado", Sqlcon);
-            Adpter2.Fill(dados2);
-            Adpter2.Dispose();
-            lblTotalPacInternado.Text = dados2.Rows.Count.ToString();
+            cmd = new SqlCommand("SELECT COUNT(*) FROM Paciente_Internado", Sqlcon);
+            lblTotalPacInternado.Text = Convert.ToString(cmd.ExecuteScalar());
+            cmd.Dispose();
             Sqlcon.Close();
         }
 
@@ -177,6 +181,7 @@ namespace SistemaHospitalar2
             this.Ocultar2();
             this.TotalMedico();
             this.TotalEstagiario();
+            this.TotalPaciente();
             this.TotalPacienteInternado();
         }
 
@@ -783,8 +788,9 @@ namespace SistemaHospitalar2
         private void btnRefresch_Click(object sender, EventArgs e)
         {
             this.TotalMedico();
-            this.TotalPacienteInternado();
             this.TotalEstagiario();
+            this.TotalPaciente();
+            this.TotalPacienteInternado();
         }
     }
 }
