@@ -49,7 +49,6 @@ namespace SistemaHospitalar2
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
-            Referencias_Formularios.login.Focus();
 
             if (confirmar)
             {

@@ -162,7 +162,7 @@
             this.logooffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1060, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1060, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -176,8 +176,9 @@
             this.cadastarToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cadastarToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.ed32;
+            this.cadastarToolStripMenuItem.Margin = new System.Windows.Forms.Padding(220, 0, 0, 0);
             this.cadastarToolStripMenuItem.Name = "cadastarToolStripMenuItem";
-            this.cadastarToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.cadastarToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.cadastarToolStripMenuItem.Text = "Cadastrar";
             // 
             // funcionáriosToolStripMenuItem
@@ -459,7 +460,7 @@
             this.consultarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.consultarToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.search_client_24px;
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // funcionariosToolStripMenuItem
@@ -749,7 +750,7 @@
             this.farmáciaToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.farmáciaToolStripMenuItem1.Image = global::SistemaHospitalar2.Properties.Resources.farmacia;
             this.farmáciaToolStripMenuItem1.Name = "farmáciaToolStripMenuItem1";
-            this.farmáciaToolStripMenuItem1.Size = new System.Drawing.Size(123, 24);
+            this.farmáciaToolStripMenuItem1.Size = new System.Drawing.Size(123, 34);
             this.farmáciaToolStripMenuItem1.Text = "Farmácia";
             // 
             // saidaDeMatrialDescartavelToolStripMenuItem
@@ -777,7 +778,7 @@
             this.sobreToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.high_importance_26px;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -788,7 +789,7 @@
             this.ajudaToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.help_24px;
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
             this.ajudaToolStripMenuItem.Text = "Ajuda ";
             this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
@@ -799,7 +800,7 @@
             this.sairToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.power_off_button_50px;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(80, 34);
             this.sairToolStripMenuItem.Text = " Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -809,6 +810,7 @@
             this.logooffToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logooffToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.logooffToolStripMenuItem.Image = global::SistemaHospitalar2.Properties.Resources.lo2;
+            this.logooffToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.logooffToolStripMenuItem.Name = "logooffToolStripMenuItem";
             this.logooffToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
             this.logooffToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
@@ -899,9 +901,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 693);
+            this.panel1.Size = new System.Drawing.Size(228, 683);
             this.panel1.TabIndex = 3;
             // 
             // btnInternado
@@ -1077,9 +1079,9 @@
             this.panel2.Controls.Add(this.btnRefresch);
             this.panel2.Controls.Add(this.IndicesHospitalar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(228, 28);
+            this.panel2.Location = new System.Drawing.Point(228, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 693);
+            this.panel2.Size = new System.Drawing.Size(832, 683);
             this.panel2.TabIndex = 4;
             // 
             // btnRefresch
@@ -1087,7 +1089,7 @@
             this.btnRefresch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresch.BackgroundImage = global::SistemaHospitalar2.Properties.Resources.tto;
             this.btnRefresch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresch.Location = new System.Drawing.Point(779, 646);
+            this.btnRefresch.Location = new System.Drawing.Point(779, 636);
             this.btnRefresch.Name = "btnRefresch";
             this.btnRefresch.Size = new System.Drawing.Size(50, 44);
             this.btnRefresch.TabIndex = 6;

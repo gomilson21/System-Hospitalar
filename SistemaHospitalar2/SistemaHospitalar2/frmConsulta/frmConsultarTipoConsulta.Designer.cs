@@ -258,8 +258,8 @@
         private System.Windows.Forms.BindingSource tipoConsultaBindingSource;
         private db_HospitalDataSetTableAdapters.Tipo_ConsultaTableAdapter tipo_ConsultaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTipoConsultaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        // private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        // private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private Guna.UI.WinForms.GunaButton btnBuscar;
         private Guna.UI.WinForms.GunaTextBox txtPesquisa;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeTipoConsultaDataGridViewTextBoxColumn;
