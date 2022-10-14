@@ -1,6 +1,6 @@
 # System-Hospitalar
 
-<img src="system-hospitalar\SistemaHospitalar2\Resources" />
+<img src="System-Hospitalar\SistemaHospitalar2\Resources\capa.png" />
 
 ## Sobre o Projecto
 Software de Gestão Hospitalar "Hospital EG Esperança"
