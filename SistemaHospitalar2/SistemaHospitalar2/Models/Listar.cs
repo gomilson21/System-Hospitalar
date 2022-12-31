@@ -55,19 +55,6 @@ namespace SistemaHospitalar2.Dados
             conect.FecharConexao();
             return tabela;
         }
-        // Usuário
-        public DataTable ListarUsuario()
-        {
-            DataTable tabela = new DataTable();
-            cmd.Connection = conect.AbrirConexao();
-            cmd.CommandText = "sp_ListarUsuario";
-            cmd.CommandType = CommandType.StoredProcedure;
-            dr = cmd.ExecuteReader();
-            tabela.Load(dr);
-            dr.Close();
-            conect.FecharConexao();
-            return tabela;
-        }
 
         //  Área para Pacientes
         //  Paciente

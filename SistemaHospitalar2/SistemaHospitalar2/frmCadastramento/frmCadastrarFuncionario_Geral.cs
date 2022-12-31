@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SistemaHospitalar2.Core;
 
 namespace SistemaHospitalar2
 {
@@ -51,36 +52,20 @@ namespace SistemaHospitalar2
             funcionarioGeralDataGridView.DataSource = dados;
         }
 
-        public void DesabilitarBotao()
+        public void HabilitarBotao(bool value)
         {
-            this.btnNovo.Enabled = true;
-            this.btnExcluir.Enabled = true;
-            this.btnSalvar.Enabled = false;
-            this.btnEditar.Enabled = true;
+            this.btnNovo.Enabled = value;
+            this.btnExcluir.Enabled = value;
+            this.btnSalvar.Enabled = !value;
+            this.btnEditar.Enabled = value;
 
             //  Habilitar textBox
-            nomeTextBox.ReadOnly = true;
-            bITextBox.ReadOnly = true;
-            emailTextBox.ReadOnly = true;
-            numero_carteiraTextBox.ReadOnly = true;
-            telefoneTextBox.ReadOnly = true;
-            enderecoTextBox.ReadOnly = true;
-        }
-
-        public void HabilitarBotao()
-        {
-            this.btnNovo.Enabled = false;
-            this.btnExcluir.Enabled = false;
-            this.btnSalvar.Enabled = true;
-            this.btnEditar.Enabled = false;
-
-            //  Habilitar textBox
-            nomeTextBox.ReadOnly = false;
-            bITextBox.ReadOnly = false;
-            emailTextBox.ReadOnly = false;
-            numero_carteiraTextBox.ReadOnly = false;
-            telefoneTextBox.ReadOnly = false;
-            enderecoTextBox.ReadOnly = false;   
+            nomeTextBox.ReadOnly = value;
+            bITextBox.ReadOnly = value;
+            emailTextBox.ReadOnly = value;
+            numero_carteiraTextBox.ReadOnly = value;
+            telefoneTextBox.ReadOnly = value;
+            enderecoTextBox.ReadOnly = value;
         }
 
         private void frmCadastrarAdministrativo_Load(object sender, EventArgs e)
@@ -90,7 +75,7 @@ namespace SistemaHospitalar2
             cbSexo.SelectedItem = "M";
             // Carregarr dados do Funcionário no DataGridView
             this.CarregarDados();
-            this.DesabilitarBotao();
+            this.HabilitarBotao(false);
         }
 
         private void btnNovo_Click_1(object sender, EventArgs e)
@@ -104,7 +89,7 @@ namespace SistemaHospitalar2
             bITextBox.Clear();
 
             nomeTextBox.Focus();
-            this.HabilitarBotao();
+            this.HabilitarBotao(true);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -123,7 +108,7 @@ namespace SistemaHospitalar2
                 numero_carteiraTextBox.Text = funcionarioGeralDataGridView.CurrentRow.Cells[8].Value.ToString();
                 data_admissaoDateTimePicker.Text = funcionarioGeralDataGridView.CurrentRow.Cells[9].Value.ToString();
                 cbCodFuncao.Text = funcionarioGeralDataGridView.CurrentRow.Cells[10].Value.ToString();
-                this.HabilitarBotao();
+                this.HabilitarBotao(true);
             }
             else
             {
@@ -185,7 +170,7 @@ namespace SistemaHospitalar2
                 bITextBox.Focus();
             }
             // Endereço de Email
-            else if (!emailTextBox.Text.EndsWith("@gmail.com") && !emailTextBox.Text.EndsWith("@hotmail.com"))
+            else if (!Validates.validateEmail(emailTextBox.Text))
             {
                 MessageBox.Show("Endereço de Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errorProvider1.SetError(emailTextBox, "Número do BI inválido!");
@@ -272,7 +257,7 @@ namespace SistemaHospitalar2
                         }
                         else
                             MessageBox.Show(funcionarios.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        this.DesabilitarBotao();
+                        this.HabilitarBotao(false);
                     }
                 }
                 else
@@ -287,7 +272,7 @@ namespace SistemaHospitalar2
                     }
                     else
                         MessageBox.Show(funcionarios.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DesabilitarBotao();
+                    this.HabilitarBotao(false);
                 }
             }          
         }

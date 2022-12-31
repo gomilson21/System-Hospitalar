@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaHospitalar2.Support;
 
 namespace SistemaHospitalar2
 {
@@ -16,7 +17,7 @@ namespace SistemaHospitalar2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicio());
+            Application.Run(InstanceForm.entrar = new frmInicio());
         }
     }
 }

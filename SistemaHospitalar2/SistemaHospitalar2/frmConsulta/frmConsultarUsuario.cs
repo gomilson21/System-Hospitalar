@@ -8,29 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SistemaHospitalar2.Controllers;
 
 namespace SistemaHospitalar2.frmConsulta
 {
     public partial class frmConsultarUsuario : Form
     {
+        private Users obj;
+
         public frmConsultarUsuario()
         {
             InitializeComponent();
+
+            this.obj = new Users();
         }
         Dados.Listar dados = new Dados.Listar();
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
         DataTable dados1;
         SqlDataAdapter Adapter;
 
-        public void CarregarDados()
+        public async void CarregarDados()
         {
-            usuarioDataGridView.DataSource = dados.ListarUsuario();
+            usuarioDataGridView.DataSource = await this.obj.list();
         }
         //  Login do Usuario
         public void PesquisarLoginUsuario()
         {
             dados1 = new DataTable();
-            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, confirmar_senha, estado_usuario, nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) WHERE login_usuario LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, estado_usuario, "+
+                "nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario ="+
+                " Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) "+
+                "WHERE login_usuario LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             Adapter.Fill(dados1);
             usuarioDataGridView.DataSource = dados1;
         }
@@ -38,7 +46,10 @@ namespace SistemaHospitalar2.frmConsulta
         public void PesquisarNomeFuncionario()
         {
             dados1 = new DataTable();
-            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, confirmar_senha, estado_usuario, nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) WHERE nome_funcionario LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, estado_usuario, "+
+                "nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario ="+
+                " Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) "+
+                "WHERE nome_funcionario LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             Adapter.Fill(dados1);
             usuarioDataGridView.DataSource = dados1;
         }
@@ -46,7 +57,10 @@ namespace SistemaHospitalar2.frmConsulta
         public void PesquisarNomeFuncao()
         {
             dados1 = new DataTable();
-            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, confirmar_senha, estado_usuario, nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) WHERE nome_funcao LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
+            Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, estado_usuario, "+
+                "nome_funcionario, nome_funcao FROM Usuario inner join Funcionarios ON (Usuario.codFuncionario ="+
+                " Funcionarios.codFuncionario) INNER JOIN Funcao ON (Funcionarios.codFuncao = Funcao.codFuncao) "+
+                "WHERE nome_funcao LIKE '%" + txtPesquisa.Text + "%'", Sqlcon);
             Adapter.Fill(dados1);
             usuarioDataGridView.DataSource = dados1;
         }

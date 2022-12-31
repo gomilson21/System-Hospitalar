@@ -199,7 +199,7 @@
             this.administrativosToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
             this.administrativosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.administrativosToolStripMenuItem1.Name = "administrativosToolStripMenuItem1";
-            this.administrativosToolStripMenuItem1.Size = new System.Drawing.Size(184, 24);
+            this.administrativosToolStripMenuItem1.Size = new System.Drawing.Size(293, 24);
             this.administrativosToolStripMenuItem1.Text = "Geral";
             this.administrativosToolStripMenuItem1.Click += new System.EventHandler(this.geralToolStripMenuItem1_Click);
             // 
@@ -208,7 +208,7 @@
             this.médicosToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
             this.médicosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
-            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(293, 24);
             this.médicosToolStripMenuItem.Text = "Médicos";
             this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
@@ -217,7 +217,7 @@
             this.estagiáriosToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
             this.estagiáriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.estagiáriosToolStripMenuItem.Name = "estagiáriosToolStripMenuItem";
-            this.estagiáriosToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.estagiáriosToolStripMenuItem.Size = new System.Drawing.Size(293, 24);
             this.estagiáriosToolStripMenuItem.Text = "Estagiários";
             this.estagiáriosToolStripMenuItem.Click += new System.EventHandler(this.estagiáriosToolStripMenuItem_Click);
             // 
@@ -226,7 +226,9 @@
             this.usuáriosToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
             this.usuáriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.usuáriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.U)));
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(293, 24);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 

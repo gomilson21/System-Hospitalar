@@ -79,6 +79,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Login.cs" />
+    <Compile Include="Controllers\Users.cs" />
+    <Compile Include="Core\Connection.cs" />
+    <Compile Include="Core\Mail.cs" />
+    <Compile Include="Core\Message.cs" />
+    <Compile Include="Core\Password.cs" />
+    <Compile Include="Core\Validates.cs" />
     <Compile Include="frmCadastramento\frmCadastrarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +122,8 @@
     <Compile Include="frmRelatorio\frmRelatorio_Obito.Designer.cs">
       <DependentUpon>frmRelatorio_Obito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core\Model.cs" />
+    <Compile Include="Models\MUsers.cs" />
     <Compile Include="Relatorio\crPrescricao_Medica.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,7 +178,7 @@
       <DependentUpon>crSolicitacaoExame.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Dados\Listar.cs" />
+    <Compile Include="Models\Listar.cs" />
     <Compile Include="db_HospitalDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -415,7 +424,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Referencias_Formularios.cs" />
-    <Compile Include="Dados\conexao.cs" />
+    <Compile Include="Models\conexao.cs" />
     <Compile Include="frmCadastramento\frmCadastrarFuncionario_Geral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -506,7 +515,7 @@
     <Compile Include="frmCadastramento\frmCadastrarMedico.Designer.cs">
       <DependentUpon>frmCadastrarMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dados\Crudes.cs" />
+    <Compile Include="Models\Crudes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmRelatorio\frmRelatorio_PrescricaoMedica.cs">
@@ -515,6 +524,7 @@
     <Compile Include="frmRelatorio\frmRelatorio_PrescricaoMedica.Designer.cs">
       <DependentUpon>frmRelatorio_PrescricaoMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Support\InstanceForm.cs" />
     <EmbeddedResource Include="frmCadastramento\frmCadastrarPaciente.resx">
       <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -1034,6 +1044,7 @@
   <ItemGroup>
     <None Include="Resources\u.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

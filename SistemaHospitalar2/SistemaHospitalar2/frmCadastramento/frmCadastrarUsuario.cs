@@ -8,23 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SistemaHospitalar2.Controllers;
 
 namespace SistemaHospitalar2
 {
     public partial class frmCadastrarUsuario : Form
     {
+        private Users obj;
         public frmCadastrarUsuario()
         {
             InitializeComponent();
+            this.obj = new Users();
         }
 
         Crudes usuario = new Crudes();
         Dados.Listar dados = new Dados.Listar();
         SqlConnection Sqlcon = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=db_Hospital;Integrated Security=True");
 
+        private DataTable data = new DataTable();
+        SqlDataAdapter Adpter;
+
         private string operacao = "inserir";
         private string codigo;
-        
+   
         private void ListarFuncionarios()
         {
             cbCodFuncionarios.DataSource = dados.ComboBoxListarFuncionario_Usuario();
@@ -32,49 +38,39 @@ namespace SistemaHospitalar2
             cbCodFuncionarios.ValueMember = "codFuncionario";
         }
 
-        private void CarregarDados()
+        private async void CarregarDados()
         {
-            usuarioDataGridView.DataSource = dados.ListarUsuario();
+            usuarioDataGridView.DataSource = await this.obj.list();
         }
 
         public void BuscarCodigo()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adpter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, confirmar_senha, estado_usuario, nome_funcionario FROM Usuario INNER JOIN  Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) WHERE codUsuario = " + Convert.ToInt32(txtBuscarCodigo.Text), Sqlcon);
-            Adpter.Fill(dados);
-            usuarioDataGridView.DataSource = dados;
+            this.Adpter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, estado_usuario,"+
+                " nome_funcionario FROM Usuario INNER JOIN  Funcionarios ON (Usuario.codFuncionario ="+
+                "Funcionarios.codFuncionario) WHERE codUsuario = " + Convert.ToInt32(txtBuscarCodigo.Text), Sqlcon);
+            Adpter.Fill(this.data);
+            usuarioDataGridView.DataSource = this.data;
         }
 
         public void BuscarNome()
         {
-            DataTable dados = new DataTable();
-            SqlDataAdapter Adapter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, confirmar_senha, estado_usuario, nome_funcionario FROM Usuario INNER JOIN  Funcionarios ON (Usuario.codFuncionario = Funcionarios.codFuncionario) WHERE login_usuario LIKE '%" + txtBuscarNome.Text +"%'", Sqlcon);
-            Adapter.Fill(dados);
-            usuarioDataGridView.DataSource = dados;
+            this.Adpter = new SqlDataAdapter("SELECT codUsuario, login_usuario, senha_usuario, estado_usuario,"+
+                " nome_funcionario FROM Usuario INNER JOIN  Funcionarios ON (Usuario.codFuncionario = "+
+                "Funcionarios.codFuncionario) WHERE login_usuario LIKE '%" + txtBuscarNome.Text +"%'", Sqlcon);
+            this.Adpter.Fill(this.data);
+            usuarioDataGridView.DataSource = this.data;
         }
 
-        public void DesabilitarBotao()
+        public void HabilitarBotao(bool value)
         {
-            btnNovo.Enabled = true;
-            btnExcluir.Enabled = true;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = true;
+            btnNovo.Enabled = value;
+            btnExcluir.Enabled = value;
+            btnSalvar.Enabled = !value;
+            btnEditar.Enabled = value;
 
-            loginTextBox.ReadOnly = true;
-            senhaTextBox.ReadOnly = true;
-            confirmar_senhaTextBox.ReadOnly = true;
-        }
-
-        public void HabilitarBotao()
-        {
-            btnNovo.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnSalvar.Enabled = true;
-            btnEditar.Enabled = false;
-
-            loginTextBox.ReadOnly = false;
-            senhaTextBox.ReadOnly = false;
-            confirmar_senhaTextBox.ReadOnly = false;
+            loginTextBox.ReadOnly = value;
+            senhaTextBox.ReadOnly = value;
+            confirmar_senhaTextBox.ReadOnly = value;
         }
 
         private void frmCadastrarUsuario_Load(object sender, EventArgs e)
@@ -83,7 +79,7 @@ namespace SistemaHospitalar2
             this.ListarFuncionarios();
             // Carregar os dados do Usuário no DataGridView
             this.CarregarDados();
-            this.DesabilitarBotao();
+            this.HabilitarBotao(true);
         }
 
         private void btnNovo_Click_1(object sender, EventArgs e)
@@ -96,7 +92,7 @@ namespace SistemaHospitalar2
             txtBuscarNome.Clear();
 
             loginTextBox.Focus();
-            this.HabilitarBotao();
+            this.HabilitarBotao(false);
         }        
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -110,7 +106,7 @@ namespace SistemaHospitalar2
                 confirmar_senhaTextBox.Text = usuarioDataGridView.CurrentRow.Cells[3].Value.ToString();
                 estado_usuarioComboBox.Text = usuarioDataGridView.CurrentRow.Cells[4].Value.ToString();
                 cbCodFuncionarios.Text = usuarioDataGridView.CurrentRow.Cells[5].Value.ToString();
-                this.HabilitarBotao();
+                this.HabilitarBotao(false);
             }
             else
             {
@@ -122,18 +118,11 @@ namespace SistemaHospitalar2
         {
             if(usuarioDataGridView.SelectedRows.Count > 0)
             {
-                if(MessageBox.Show("Tem certeza que deseja excluir estes dados", "Hospital EG Esperança",
+                if (MessageBox.Show("Tem certeza que deseja excluir estes dados", "Hospital EG Esperança",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    codigo = usuarioDataGridView.CurrentRow.Cells[0].Value.ToString();
-                    usuario.eliminarUsuario(Convert.ToInt32(codigo));
-                    if (usuario.resp == "OK")
-                    {
-                        MessageBox.Show("Dados do usuário eliminados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.CarregarDados();
-                    }
-                    else
-                        MessageBox.Show(usuario.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.obj.delete(Convert.ToInt32(codUsuarioTextBox.Text));
+                    this.CarregarDados();
                 }
             }
             else
@@ -190,15 +179,8 @@ namespace SistemaHospitalar2
                     }
                     else
                     {
-                        usuario.inserirUsuario(loginTextBox.Text.Trim(), senhaTextBox.Text.Trim(), confirmar_senhaTextBox.Text, Convert.ToString(estado_usuarioComboBox.SelectedItem), Convert.ToInt32(cbCodFuncionarios.SelectedValue));
-                        if (usuario.resp.Equals("OK"))
-                        {
-                            MessageBox.Show("Novo Usuário Adicionado!", "Hospital EG Esperança", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.CarregarDados();
-                            this.DesabilitarBotao();
-                        }
-                        else
-                            MessageBox.Show(usuario.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.obj.create(loginTextBox.Text, senhaTextBox.Text, confirmar_senhaTextBox.Text,
+                            estado_usuarioComboBox.Text, Convert.ToInt32(cbCodFuncionarios.SelectedValue));
                     }
                 }
                 else if (operacao.Equals("editar"))
@@ -221,21 +203,17 @@ namespace SistemaHospitalar2
                         if (MessageBox.Show("Tem certeza que deseja continuar com as alterações feitas?", "Hospital EG Esperança",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            usuario.editarUsuario(Convert.ToInt32(codigo), loginTextBox.Text.Trim(), senhaTextBox.Text.Trim(),
-                                confirmar_senhaTextBox.Text, Convert.ToString(estado_usuarioComboBox.SelectedItem), Convert.ToInt32(cbCodFuncionarios.SelectedValue));
-                            if (usuario.resp.Equals("OK"))
-                            {
-                                MessageBox.Show("Dados do Usuário actualizados com sucesso!", "Hospital EG Esperança",
-                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.CarregarDados();
-                                operacao = "inserir";
-                            }
-                            else
-                                MessageBox.Show(usuario.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            this.DesabilitarBotao();
+                            this.obj.update(Convert.ToInt32(codigo), loginTextBox.Text, senhaTextBox.Text, confirmar_senhaTextBox.Text,
+                                estado_usuarioComboBox.Text, Convert.ToInt32(cbCodFuncionarios.SelectedValue));              
+                            operacao = "inserir";
                         }
+                        else
+                            MessageBox.Show(usuario.resp, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        this.CarregarDados();
+                        this.HabilitarBotao(false);
                     }
-                }     
+                }
             }
         }
 
@@ -281,9 +259,8 @@ namespace SistemaHospitalar2
             codUsuarioTextBox.Text = usuarioDataGridView.CurrentRow.Cells[0].Value.ToString();
             loginTextBox.Text = usuarioDataGridView.CurrentRow.Cells[1].Value.ToString();
             senhaTextBox.Text = usuarioDataGridView.CurrentRow.Cells[2].Value.ToString();
-            confirmar_senhaTextBox.Text = usuarioDataGridView.CurrentRow.Cells[3].Value.ToString();
-            estado_usuarioComboBox.Text = usuarioDataGridView.CurrentRow.Cells[4].Value.ToString();
-            cbCodFuncionarios.Text = usuarioDataGridView.CurrentRow.Cells[5].Value.ToString();
+            estado_usuarioComboBox.Text = usuarioDataGridView.CurrentRow.Cells[3].Value.ToString();
+            cbCodFuncionarios.Text = usuarioDataGridView.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

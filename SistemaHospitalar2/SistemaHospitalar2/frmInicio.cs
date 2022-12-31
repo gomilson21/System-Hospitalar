@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaHospitalar2.Support;
 
 namespace SistemaHospitalar2
 {
@@ -32,9 +33,12 @@ namespace SistemaHospitalar2
             {
                 timer1.Enabled = false;
 
-                frmLogin iniciando = new frmLogin();
-                this.Hide();
-                iniciando.ShowDialog();
+                if (InstanceForm.login == null)
+                    InstanceForm.login = new frmLogin();
+
+                InstanceForm.entrar.Hide();
+                InstanceForm.login.Show();
+                InstanceForm.login.Focus();
             }         
         }
     }
